@@ -1,0 +1,2315 @@
+[
+  {
+    "offense": "Murder",
+    "section": "IPC 302",
+    "punishment": "Death or life imprisonment and fine",
+    "fine": "Court may impose any amount depending on severity and victim’s circumstances",
+    "helpline": "100",
+    "link": "https://www.ncrb.gov.in",
+    "explanation": "Murder is the intentional killing of another person with premeditated intent or extreme recklessness leading to death."
+  },
+  {
+    "offense": "Rape",
+    "section": "IPC 376",
+    "punishment": "Minimum 10 years to life imprisonment",
+    "fine": "Includes medical costs, rehabilitation support, and compensation to the victim",
+    "helpline": "1091",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Rape is a non-consensual sexual act performed against a person’s will or through coercion, force, or manipulation."
+  },
+  {
+    "offense": "Theft",
+    "section": "IPC 378",
+    "punishment": "Up to 3 years imprisonment, or fine, or both",
+    "fine": "Based on value of stolen property; may include recovery + penalty",
+    "helpline": "100",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Theft is taking someone's movable property without their consent with the intent to permanently deprive them of it."
+  },
+  {
+    "offense": "Acid Attack",
+    "section": "IPC 326A",
+    "punishment": "10 years to life imprisonment",
+    "fine": "Must cover full medical and rehabilitation expenses",
+    "helpline": "181",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Acid attack involves throwing or applying acid to cause permanent disfigurement or harm to another person."
+  },
+  {
+    "offense": "Cyber Stalking",
+    "section": "IT Act 66E",
+    "punishment": "Up to 3 years imprisonment and/or ₹2,00,000 fine",
+    "fine": "Varies with impact and frequency of harassment",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Cyber stalking refers to persistent tracking, following, or harassment of someone online through messages, posts, or surveillance."
+  },
+  {
+    "offense": "Dowry Harassment",
+    "section": "IPC 498A",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Includes mental cruelty compensation, if applicable",
+    "helpline": "1091",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Dowry harassment involves mental or physical cruelty by husband or in-laws to demand dowry from the wife or her family."
+  },
+  {
+    "offense": "Kidnapping",
+    "section": "IPC 363",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court may impose based on ransom demand or harm",
+    "helpline": "100",
+    "link": "https://www.ncpcr.gov.in",
+    "explanation": "Kidnapping is taking or enticing away a person, especially a minor or woman, without lawful authority or consent."
+  },
+  {
+    "offense": "Child Labour",
+    "section": "CLPR Act, Sec 3",
+    "punishment": "6 months to 2 years and/or ₹20,000–₹50,000 fine",
+    "fine": "Fixed fine per child; goes to rehabilitation funds",
+    "helpline": "1098",
+    "link": "https://ncpcr.gov.in",
+    "explanation": "Child labour refers to employment of children below legal age in hazardous or non-hazardous occupations in violation of law."
+  },
+  {
+    "offense": "Sexual Harassment at Workplace",
+    "section": "IPC 354A",
+    "punishment": "Up to 3 years imprisonment or fine or both",
+    "fine": "Decided by Internal Complaints Committee + court",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Unwelcome sexual behaviour including physical contact, demands for sexual favours, or verbal conduct at the workplace."
+  },
+  {
+    "offense": "Cyberbullying",
+    "section": "IPC 506 + IT Act",
+    "punishment": "Up to 2 years imprisonment and/or ₹1,00,000 fine",
+    "fine": "Decided based on mental distress and harassment level",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Cyberbullying refers to using digital platforms like social media or messaging apps to harass, threaten, or humiliate someone repeatedly."
+  },
+  {
+    "offense": "Human Trafficking",
+    "section": "IPC 370",
+    "punishment": "7 years to life imprisonment and fine",
+    "fine": "Heavy fine + mandatory rehabilitation compensation",
+    "helpline": "1098",
+    "link": "https://ncpcr.gov.in",
+    "explanation": "Human trafficking is the illegal trade of humans for forced labour, sexual slavery, or exploitation."
+  },
+  {
+    "offense": "Mob Lynching",
+    "section": "IPC 302, 147, 149",
+    "punishment": "Life imprisonment or death penalty",
+    "fine": "Court imposes fine and victim compensation",
+    "helpline": "100",
+    "link": "https://www.nhrc.nic.in",
+    "explanation": "Mob lynching is an unlawful killing by a group of people based on rumors, religious beliefs, or personal enmity."
+  },
+  {
+    "offense": "Domestic Violence",
+    "section": "PWDVA Act 2005",
+    "punishment": "1 year imprisonment or fine or both",
+    "fine": "Includes medical, shelter and mental trauma costs",
+    "helpline": "181",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Any physical, emotional, sexual, or economic abuse by a partner or family member within a household."
+  },
+  {
+    "offense": "Molestation",
+    "section": "IPC 354",
+    "punishment": "1 to 5 years imprisonment and fine",
+    "fine": "Compensation to victim for dignity violation",
+    "helpline": "1091",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Molestation involves physical assault or use of criminal force with the intent to outrage the modesty of a woman."
+  },
+  {
+    "offense": "Bribery",
+    "section": "PC Act Sec 7",
+    "punishment": "3 to 7 years imprisonment and fine",
+    "fine": "Based on bribe amount and case severity",
+    "helpline": "1064",
+    "link": "https://cvc.gov.in",
+    "explanation": "Bribery is offering, giving, receiving, or soliciting something of value to influence a public official's actions."
+  },
+  {
+    "offense": "Chain Snatching",
+    "section": "IPC 392",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Value of chain + penalty",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Snatching jewelry, particularly chains, from individuals in public places with force or sudden movement."
+  },
+  {
+    "offense": "Fake Currency Possession",
+    "section": "IPC 489C",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As decided by court",
+    "helpline": "100",
+    "link": "https://www.rbi.org.in",
+    "explanation": "Possessing counterfeit currency notes with the knowledge or intent to use them as genuine."
+  },
+  {
+    "offense": "Criminal Trespass",
+    "section": "IPC 447",
+    "punishment": "Up to 3 months imprisonment or ₹500 fine or both",
+    "fine": "Varies based on property damage or intent",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Entering another person’s property without permission with intent to commit an offense or intimidate."
+  },
+  {
+    "offense": "Public Obscenity",
+    "section": "IPC 294",
+    "punishment": "Up to 3 months imprisonment or fine or both",
+    "fine": "Varies based on public complaint and intent",
+    "helpline": "100",
+    "link": "https://www.indiacode.nic.in",
+    "explanation": "Doing obscene acts or uttering obscene words in a public place causing annoyance to others."
+  },
+  {
+    "offense": "Online Fraud",
+    "section": "IT Act 66D",
+    "punishment": "Up to 3 years imprisonment and ₹1 lakh fine",
+    "fine": "Recovery + penalty depending on amount cheated",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Fraudulent schemes or scams carried out through digital means to cheat someone of money or personal data."
+  },
+  {
+    "offense": "Revenge Porn",
+    "section": "IT Act 66E, IPC 354C",
+    "punishment": "3 to 7 years imprisonment and fine",
+    "fine": "Court-imposed based on victim impact",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Sharing someone’s intimate images or videos without consent to shame, blackmail, or harass them."
+  },
+  {
+    "offense": "Attempt to Suicide",
+    "section": "IPC 309 (decriminalized)",
+    "punishment": "No punishment (mental health support mandated)",
+    "fine": "N/A",
+    "helpline": "9152987821",
+    "link": "https://tele-manas.mohfw.gov.in",
+    "explanation": "Voluntarily attempting to take one’s own life; currently decriminalized and requires mental health intervention."
+  },
+  {
+    "offense": "Drug Possession",
+    "section": "NDPS Act Sec 21",
+    "punishment": "6 months to 10 years imprisonment based on quantity",
+    "fine": "₹10,000 to ₹1 lakh or more",
+    "helpline": "14416",
+    "link": "https://socialjustice.gov.in",
+    "explanation": "Illegal possession of narcotic or psychotropic substances for personal use or sale."
+  },
+  {
+    "offense": "Drink and Drive",
+    "section": "MV Act Sec 185",
+    "punishment": "6 months to 2 years imprisonment and/or fine",
+    "fine": "₹2,000 to ₹10,000",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Operating a motor vehicle while under the influence of alcohol beyond the legal limit."
+  },
+  {
+    "offense": "Blackmail",
+    "section": "IPC 384",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court decides based on financial or emotional harm",
+    "helpline": "100",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Demanding money or favors from someone by threatening to reveal embarrassing or harmful information."
+  },
+  {
+    "offense": "Forgery",
+    "section": "IPC 465",
+    "punishment": "Up to 2 years imprisonment or fine or both",
+    "fine": "As decided by court depending on document forged",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Creating or altering a document with intent to deceive or defraud."
+  },
+  {
+    "offense": "Voyeurism",
+    "section": "IPC 354C",
+    "punishment": "1 to 3 years imprisonment and fine for first conviction; 3 to 7 years for repeat",
+    "fine": "Depends on extent of privacy breach",
+    "helpline": "181",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Watching, capturing, or distributing images of a woman engaging in a private act without her consent."
+  },
+  {
+    "offense": "Chain Messaging Fraud",
+    "section": "IT Act 66D",
+    "punishment": "Up to 3 years imprisonment and ₹1,00,000 fine",
+    "fine": "Based on financial harm caused by scam",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Spreading fraudulent messages via social media or SMS to deceive users into forwarding them or making payments."
+  },
+  {
+    "offense": "Obscene Publications",
+    "section": "IPC 292",
+    "punishment": "Up to 2 years imprisonment and/or ₹2,000 fine",
+    "fine": "Increased for repeat offenses",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Selling, distributing, or publishing content that is lascivious or appeals to prurient interests."
+  },
+  {
+    "offense": "Stalking",
+    "section": "IPC 354D",
+    "punishment": "Up to 3 years for first conviction, 5 years for repeat",
+    "fine": "Decided by court based on intent and impact",
+    "helpline": "1091",
+    "link": "https://shebox.nic.in",
+    "explanation": "Repeatedly following or contacting someone, physically or online, despite clear indication of disinterest."
+  },
+  {
+    "offense": "Threatening Witness",
+    "section": "IPC 506 + 195A",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court may order victim protection cost",
+    "helpline": "100",
+    "link": "https://www.ncrb.gov.in",
+    "explanation": "Threatening or intimidating a person to prevent them from giving truthful testimony in court."
+  },
+  {
+    "offense": "Throwing Garbage in Public Place",
+    "section": "Municipal Acts / IPC 268",
+    "punishment": "Fine or short-term detention",
+    "fine": "Up to ₹5,000 depending on city law",
+    "helpline": "1533",
+    "link": "https://swachhbharatmission.gov.in",
+    "explanation": "Disposing of waste in public spaces in violation of cleanliness and sanitation norms."
+  },
+  {
+    "offense": "Cheating",
+    "section": "IPC 420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As decided based on cheated amount",
+    "helpline": "100",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Deceiving someone intentionally to gain property, money, or service unlawfully."
+  },
+  {
+    "offense": "Misuse of Emergency Services",
+    "section": "IPC 182",
+    "punishment": "6 months imprisonment or fine or both",
+    "fine": "Up to ₹1,000 or cost incurred by emergency response",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Providing false information to police or emergency services resulting in unnecessary deployment of resources."
+  },
+  {
+    "offense": "Honour Killing",
+    "section": "IPC 302 + 34",
+    "punishment": "Life imprisonment or death penalty",
+    "fine": "Court orders compensation to victim’s family",
+    "helpline": "1091",
+    "link": "https://nhrc.nic.in",
+    "explanation": "Killing of a family or community member for perceived dishonor brought upon the family."
+  },
+  {
+    "offense": "Cyber Defamation",
+    "section": "IPC 500 + IT Act",
+    "punishment": "Up to 2 years imprisonment and/or fine",
+    "fine": "Depends on reputational damage caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Publishing defamatory content about someone through digital platforms with the intent to harm reputation."
+  },
+  {
+    "offense": "Fake Job Scam",
+    "section": "IPC 420 + 468",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on fraud amount and number of victims",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Offering false job opportunities to collect money or personal information under fake pretense."
+  },
+  {
+    "offense": "Posting Private Images",
+    "section": "IT Act 66E",
+    "punishment": "Up to 3 years imprisonment or ₹2 lakh fine or both",
+    "fine": "Compensation to victim for privacy violation",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Sharing or uploading someone's private photos or videos without consent, violating their privacy."
+  },
+  {
+    "offense": "Burning National Flag",
+    "section": "Prevention of Insults to National Honour Act, 1971",
+    "punishment": "Up to 3 years imprisonment or fine or both",
+    "fine": "As decided by court",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Intentional act of disrespect toward the Indian national flag including burning or defacing it."
+  },
+  {
+    "offense": "Public Nudity",
+    "section": "IPC 294",
+    "punishment": "Up to 3 months imprisonment or fine or both",
+    "fine": "Varies with case",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Displaying nudity in public in a manner likely to cause offense or annoyance."
+  },
+  {
+    "offense": "Posting Fake News",
+    "section": "IPC 505(1)(b)",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court may impose depending on spread and harm",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Spreading false information via any platform that may cause panic or public unrest."
+  },
+  {
+    "offense": "Food Adulteration",
+    "section": "FSSAI Act Sec 59",
+    "punishment": "6 months to life imprisonment and fine",
+    "fine": "₹1 lakh to ₹10 lakh based on severity",
+    "helpline": "1800112100",
+    "link": "https://www.fssai.gov.in",
+    "explanation": "Mixing harmful substances with food or drink meant for sale, endangering public health."
+  },
+  {
+    "offense": "Online Impersonation",
+    "section": "IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and ₹1 lakh fine",
+    "fine": "Court decides based on intent and usage",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using someone else’s identity online (e.g., photos, accounts) to mislead or commit fraud."
+  },
+  {
+    "offense": "Child Marriage",
+    "section": "PCMA 2006, Sec 9",
+    "punishment": "Up to 2 years imprisonment and ₹1 lakh fine",
+    "fine": "Goes towards child support/rehab",
+    "helpline": "1098",
+    "link": "https://ncpcr.gov.in",
+    "explanation": "Marrying a girl under 18 or a boy under 21 is illegal and punishable under this act."
+  },
+  {
+    "offense": "Disrespect to National Anthem",
+    "section": "Prevention of Insults to National Honour Act, 1971",
+    "punishment": "Up to 3 years imprisonment or fine",
+    "fine": "As per case",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Willful insult or non-cooperation when the national anthem is being sung or played."
+  },
+  {
+    "offense": "Marital Rape (not criminalized yet)",
+    "section": "Not recognized under IPC currently",
+    "punishment": "N/A (Under review in courts)",
+    "fine": "N/A",
+    "helpline": "1091",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Non-consensual intercourse by a husband with his wife; not yet legally criminalized in India."
+  },
+  {
+    "offense": "Misleading Advertisement",
+    "section": "CPA 2019, Sec 2(28)",
+    "punishment": "Up to ₹10 lakh fine and 2 years imprisonment",
+    "fine": "Varies based on product and harm",
+    "helpline": "1915",
+    "link": "https://consumeraffairs.nic.in",
+    "explanation": "Advertising false claims about a product or service that mislead consumers."
+  },
+  {
+    "offense": "Cyber Gambling",
+    "section": "Public Gambling Act + IT Act",
+    "punishment": "Fine and short-term imprisonment",
+    "fine": "Varies with state laws and platform used",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Participating or running online gambling games, betting or lotteries through digital means."
+  },
+  {
+    "offense": "Over Speeding",
+    "section": "MV Act Sec 183",
+    "punishment": "₹1,000 to ₹5,000 fine; license seizure for repeat",
+    "fine": "Fixed based on km/hr over limit",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Driving a vehicle at a speed higher than the legal limit set by law."
+  },
+  {
+    "offense": "Obstructing Public Servant",
+    "section": "IPC 186",
+    "punishment": "3 months imprisonment or ₹500 fine or both",
+    "fine": "Minor court-imposed penalty",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Preventing a government employee from doing official duty through force or interference."
+  },
+  {
+    "offense": "Defiling Place of Worship",
+    "section": "IPC 295",
+    "punishment": "Up to 2 years imprisonment or fine or both",
+    "fine": "Court-decided based on extent of damage",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Intentional act of damaging, insulting, or defiling any religious place or object."
+  },
+  {
+    "offense": "Illegal Abortion",
+    "section": "IPC 312",
+    "punishment": "Up to 3 years imprisonment or fine or both",
+    "fine": "Court may impose based on whether woman consented or not",
+    "helpline": "1091",
+    "link": "https://main.mohfw.gov.in",
+    "explanation": "Performing abortion without meeting legal criteria, or without consent, especially beyond prescribed gestation limit."
+  },
+  {
+    "offense": "Animal Cruelty",
+    "section": "Prevention of Cruelty to Animals Act, 1960",
+    "punishment": "Up to 3 months imprisonment and/or fine",
+    "fine": "Up to ₹1,000 or more for repeated cruelty",
+    "helpline": "1962",
+    "link": "https://awbi.gov.in",
+    "explanation": "Causing unnecessary pain, beating, overworking or killing animals without lawful reason or cruelty-free methods."
+  },
+  {
+    "offense": "Ragging",
+    "section": "UGC Regulations & IPC 323/506",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "May include victim compensation and rustication from college",
+    "helpline": "1800-180-5522",
+    "link": "https://www.antiragging.in",
+    "explanation": "Harassment, abuse, or humiliation of a student by seniors or batchmates in educational institutions."
+  },
+  {
+    "offense": "False Dowry Complaint",
+    "section": "IPC 182, 211",
+    "punishment": "6 months to 7 years imprisonment and/or fine",
+    "fine": "Court may impose based on false charges proven",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Knowingly filing a false dowry case with malicious intent, misusing protective legal provisions."
+  },
+  {
+    "offense": "Eve-Teasing",
+    "section": "IPC 509",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-imposed depending on harassment level",
+    "helpline": "1091",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Making unwanted advances, comments or gestures of a sexual nature toward women in public."
+  },
+  {
+    "offense": "Assault",
+    "section": "IPC 351",
+    "punishment": "Up to 3 months imprisonment or fine or both",
+    "fine": "Court decides based on physical/mental impact",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Any threat or attempt to apply force on another person in a hostile manner."
+  },
+  {
+    "offense": "Assault on Public Servant",
+    "section": "IPC 353",
+    "punishment": "Up to 2 years imprisonment or fine or both",
+    "fine": "May include cost of damage and compensation",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Attacking or threatening a government employee while they are discharging their lawful duties."
+  },
+  {
+    "offense": "Spreading Communal Hatred",
+    "section": "IPC 153A",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-imposed based on damage caused",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Promoting enmity between groups on basis of religion, race, language, or community."
+  },
+  {
+    "offense": "Drunk and Disorderly Conduct",
+    "section": "IPC 510",
+    "punishment": "Up to 24 hours imprisonment and/or ₹10 fine",
+    "fine": "Nominal fine as per IPC",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Appearing intoxicated and causing nuisance in public places."
+  },
+  {
+    "offense": "Spitting in Public",
+    "section": "Municipal Acts/Local Fines",
+    "punishment": "Fine only",
+    "fine": "₹200 to ₹5,000 depending on local laws",
+    "helpline": "1533",
+    "link": "https://swachhbharatmission.gov.in",
+    "explanation": "Spitting in public places violating cleanliness norms, especially dangerous during disease outbreaks."
+  },
+  {
+    "offense": "Obstructing Ambulance",
+    "section": "IPC 269 + MV Act",
+    "punishment": "Up to 6 months imprisonment or fine or both",
+    "fine": "₹1,000 or more depending on delay caused",
+    "helpline": "102",
+    "link": "https://morth.nic.in",
+    "explanation": "Blocking or delaying an emergency vehicle like ambulance or fire engine intentionally or negligently."
+  },
+  {
+    "offense": "Tampering with Evidence",
+    "section": "IPC 201",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As decided by court based on severity",
+    "helpline": "100",
+    "link": "https://www.ncrb.gov.in",
+    "explanation": "Destroying or hiding material evidence to protect a criminal or mislead the investigation."
+  },
+  {
+    "offense": "Misappropriation of Funds",
+    "section": "IPC 403",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "Based on misused amount",
+    "helpline": "1064",
+    "link": "https://cvc.gov.in",
+    "explanation": "Using funds or property entrusted for personal benefit or unauthorized purposes."
+  },
+  {
+    "offense": "House Trespass",
+    "section": "IPC 448",
+    "punishment": "Up to 1 year imprisonment or fine or both",
+    "fine": "May include damage cost",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Illegally entering someone’s home or staying without permission to intimidate or harm."
+  },
+  {
+    "offense": "False Medical Claim",
+    "section": "IPC 420 + 417",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Equal to amount defrauded",
+    "helpline": "14416",
+    "link": "https://main.mohfw.gov.in",
+    "explanation": "Claiming insurance or health reimbursement using forged documents or fake treatment records."
+  },
+  {
+    "offense": "Unlawful Assembly",
+    "section": "IPC 141",
+    "punishment": "Up to 6 months imprisonment and/or fine",
+    "fine": "Varies based on damages and intent",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Gathering of 5 or more people with common intent to commit violence or disturb peace."
+  },
+  {
+    "offense": "Causing Death by Negligence",
+    "section": "IPC 304A",
+    "punishment": "Up to 2 years imprisonment or fine or both",
+    "fine": "Depends on harm caused and case facts",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Causing someone's death through rash or negligent acts without intent to kill."
+  },
+  {
+    "offense": "Bank Fraud",
+    "section": "IPC 420 + 467",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Depends on amount of fraud",
+    "helpline": "1930",
+    "link": "https://www.rbi.org.in",
+    "explanation": "Obtaining money or credit from banks through forgery, misrepresentation or identity theft."
+  },
+  {
+    "offense": "Medical Negligence",
+    "section": "IPC 304A + CPA 2019",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "Varies with harm or death caused",
+    "helpline": "14416",
+    "link": "https://main.mohfw.gov.in",
+    "explanation": "Negligent or careless behavior by a medical professional resulting in harm to patient."
+  },
+  {
+    "offense": "Reckless Driving",
+    "section": "MV Act Sec 279",
+    "punishment": "Up to 6 months imprisonment and/or ₹1,000 fine",
+    "fine": "Increased for repeat violations",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Driving a vehicle in a dangerous manner causing risk to life or property."
+  },
+  {
+    "offense": "Obscene Phone Calls",
+    "section": "IPC 509 + IT Act",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court decides based on trauma and frequency",
+    "helpline": "1091",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Making repeated lewd or threatening phone calls, especially targeting women or minors."
+  },
+  {
+    "offense": "Harassing Over Loan Recovery",
+    "section": "RBI Circular + IPC 503/506",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "Varies based on tactics used",
+    "helpline": "14440",
+    "link": "https://www.rbi.org.in",
+    "explanation": "Using abusive, threatening or coercive tactics by recovery agents for unpaid loans."
+  },
+  {
+    "offense": "Adulteration of Drugs",
+    "section": "Drugs & Cosmetics Act Sec 27",
+    "punishment": "10 years to life imprisonment and fine",
+    "fine": "₹10 lakh or 3 times drug value, whichever higher",
+    "helpline": "1800111454",
+    "link": "https://cdsco.gov.in",
+    "explanation": "Manufacturing or selling medicines that are fake, unsafe, or altered without approval."
+  },
+  {
+    "offense": "Tampering Vehicle License Plate",
+    "section": "MV Act Sec 192",
+    "punishment": "Up to 1 year imprisonment and/or ₹5,000 fine",
+    "fine": "Fixed penalty + registration cancellation",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Modifying, hiding, or using fake number plates to evade identification."
+  },
+  {
+    "offense": "Posting Communal Content",
+    "section": "IPC 153A + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Based on communal disturbance caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sharing hate content on social media promoting religious or caste-based hatred."
+  },
+  {
+    "offense": "Using Fake Identity on Social Media",
+    "section": "IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and/or ₹1 lakh fine",
+    "fine": "Varies with misuse and damage caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Creating a fake account or impersonating someone else on platforms like Facebook or Instagram."
+  },
+  {
+    "offense": "Scamming via UPI or QR Code",
+    "section": "IT Act 66D",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Equal to defrauded amount or more",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Tricking people into scanning fake QR codes or transferring money using UPI apps."
+  },
+  {
+    "offense": "Chain Snatching by Bike",
+    "section": "IPC 392",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Value of stolen chain plus penalty",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Snatching jewelry from a moving vehicle, usually from women pedestrians, and escaping by bike."
+  },
+  {
+    "offense": "Public Urination",
+    "section": "Municipal Acts / IPC 290",
+    "punishment": "Fine or short detention",
+    "fine": "₹200 to ₹1,000 depending on city rules",
+    "helpline": "1533",
+    "link": "https://swachhbharatmission.gov.in",
+    "explanation": "Urinating in public places causing health hazards or public nuisance."
+  },
+  {
+    "offense": "Throwing Litter from Vehicle",
+    "section": "MV Act + Municipal Bylaws",
+    "punishment": "Fine only",
+    "fine": "₹500 to ₹2,000",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Throwing garbage or waste out of vehicles onto roads or public spaces."
+  },
+  {
+    "offense": "Spreading False Info During Epidemic",
+    "section": "Epidemic Diseases Act + IPC 505(1)",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-imposed depending on panic caused",
+    "helpline": "1075",
+    "link": "https://www.mohfw.gov.in",
+    "explanation": "Sharing fake news or misinformation about health crises like COVID-19."
+  },
+  {
+    "offense": "Non-Compliance with Quarantine",
+    "section": "Epidemic Act + Disaster Mgmt Act",
+    "punishment": "Up to 2 years imprisonment or fine or both",
+    "fine": "As decided by local authority or court",
+    "helpline": "1075",
+    "link": "https://www.mohfw.gov.in",
+    "explanation": "Failing to follow quarantine or isolation rules during infectious disease outbreaks."
+  },
+  {
+    "offense": "Drunk Driving with Minor in Car",
+    "section": "MV Act Sec 185 + 199A",
+    "punishment": "₹10,000 fine + license suspension + 3 months jail",
+    "fine": "₹10,000 or higher with possible court case",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Driving drunk while a child is present, treated as aggravated offense under Motor Vehicle Act."
+  },
+  {
+    "offense": "Neglecting Elderly Parents",
+    "section": "MWPSC Act 2007",
+    "punishment": "Up to 3 months imprisonment or fine",
+    "fine": "Monthly maintenance ordered by Tribunal",
+    "helpline": "14567",
+    "link": "https://socialjustice.gov.in",
+    "explanation": "Refusing to care for or financially support senior citizen parents despite capability."
+  },
+  {
+    "offense": "Using Mobile While Driving",
+    "section": "MV Act Sec 184",
+    "punishment": "₹1,000 to ₹5,000 fine and/or license suspension",
+    "fine": "As per violation and number of repeats",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Using a handheld mobile phone while driving, risking accidents."
+  },
+  {
+    "offense": "Forgery of Government Documents",
+    "section": "IPC 468",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on document forged and purpose",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Forging documents like Aadhar, PAN, birth certificates for personal gain or fraud."
+  },
+  {
+    "offense": "Demanding Dowry",
+    "section": "Dowry Prohibition Act, Sec 4",
+    "punishment": "Up to 5 years imprisonment and ₹15,000 fine",
+    "fine": "May increase based on demand and abuse",
+    "helpline": "1091",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Asking for money, property, or gifts as a condition of marriage or afterward."
+  },
+  {
+    "offense": "Disobeying COVID Guidelines",
+    "section": "Disaster Mgmt Act Sec 51 + IPC 188",
+    "punishment": "Up to 1 year imprisonment or fine",
+    "fine": "₹500 to ₹2,000 depending on rule",
+    "helpline": "1075",
+    "link": "https://www.mohfw.gov.in",
+    "explanation": "Breaking curfew, mask, or distancing rules during government-declared pandemic restrictions."
+  },
+  {
+    "offense": "Misusing National Emblem",
+    "section": "State Emblem of India Act 2005",
+    "punishment": "Up to 2 years imprisonment and ₹5,000 fine",
+    "fine": "As prescribed by act",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Using the Indian national emblem without authorization for business or personal branding."
+  },
+  {
+    "offense": "Making Hoax Bomb Threat",
+    "section": "IPC 505(1)(b), 507",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Decided by court and may include recovery costs",
+    "helpline": "100",
+    "link": "https://www.ncrb.gov.in",
+    "explanation": "Falsely alerting authorities or public about a bomb to create panic or disrupt peace."
+  },
+  {
+    "offense": "Online Betting on Sports",
+    "section": "Public Gambling Act + IT Act",
+    "punishment": "Fine and/or imprisonment depending on state",
+    "fine": "₹1,000 to ₹10,000 or more",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using websites or apps to place bets on matches like cricket or football."
+  },
+  {
+    "offense": "Using Loudspeakers Without Permission",
+    "section": "Noise Pollution Rules + IPC 188",
+    "punishment": "Fine and equipment seizure",
+    "fine": "₹1,000 to ₹10,000 depending on violation",
+    "helpline": "100",
+    "link": "https://cpcb.nic.in",
+    "explanation": "Playing music or announcements on loudspeakers in public places without approval."
+  },
+  {
+    "offense": "Blocking Emergency Exit",
+    "section": "Fire Safety Act + IPC 336",
+    "punishment": "Fine or imprisonment up to 3 months",
+    "fine": "As per safety inspector's report",
+    "helpline": "101",
+    "link": "https://ndma.gov.in",
+    "explanation": "Obstructing fire exits or escape routes in buildings, risking lives during emergencies."
+  },
+  {
+    "offense": "Selling Expired Medicines",
+    "section": "Drugs & Cosmetics Act Sec 27(d)",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "₹20,000 or more based on harm caused",
+    "helpline": "1800111454",
+    "link": "https://cdsco.gov.in",
+    "explanation": "Selling medicines that are past expiry date, risking consumer health."
+  },
+  {
+    "offense": "Defaming a Woman on Social Media",
+    "section": "IPC 509 + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "As decided by court",
+    "helpline": "1091",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Posting false, vulgar or defamatory content about a woman online to insult her modesty."
+  },
+  {
+    "offense": "Sexual Advances Toward Minor Online",
+    "section": "POCSO Act + IT Act",
+    "punishment": "5 to 7 years imprisonment and fine",
+    "fine": "Court-imposed depending on act and impact",
+    "helpline": "1098",
+    "link": "https://ncpcr.gov.in",
+    "explanation": "Sending obscene content or messages to a child with sexual intent using digital means."
+  },
+  {
+    "offense": "Sharing Deepfake Videos",
+    "section": "IT Act 66E + IPC 468",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on damage caused to victim",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using AI tools to create and share fake videos or images impersonating someone."
+  },
+  {
+    "offense": "Fake Calls for Kidnapping Ransom",
+    "section": "IPC 385 + 507",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "May include cost of investigation",
+    "helpline": "100",
+    "link": "https://www.ncrb.gov.in",
+    "explanation": "Calling victim’s family with false claims of abduction to extort money."
+  },
+  {
+    "offense": "Fake News Using AI Tools",
+    "section": "IPC 505 + IT Act",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "As decided by court based on social impact",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Generating and spreading misinformation using AI-generated content to mislead public or defame."
+  },
+  {
+    "offense": "Tampering with CCTV Footage",
+    "section": "IPC 204 + IT Act",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "Court may impose based on case severity",
+    "helpline": "100",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Intentionally deleting or altering surveillance camera recordings to hide criminal activity."
+  },
+  {
+    "offense": "Creating Fake Government Website",
+    "section": "IPC 420 + IT Act 66C",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on fraud amount and harm caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Creating a duplicate website that impersonates government portals to collect money or personal data illegally."
+  },
+  {
+    "offense": "Leak of Exam Paper",
+    "section": "IPC 420 + IT Act + Exam Acts",
+    "punishment": "Up to 10 years imprisonment and/or fine",
+    "fine": "Decided by court; may include cancellation of job/exam",
+    "helpline": "100",
+    "link": "https://www.education.gov.in",
+    "explanation": "Illegally accessing, sharing, or leaking question papers before scheduled government or academic exams."
+  },
+  {
+    "offense": "Tampering Vehicle Odometer",
+    "section": "MV Act + IPC 420",
+    "punishment": "Up to 1 year imprisonment and fine",
+    "fine": "₹5,000 or more based on fraud",
+    "helpline": "103",
+    "link": "https://morth.nic.in",
+    "explanation": "Resetting or altering the mileage of a vehicle to mislead buyers about actual usage."
+  },
+  {
+    "offense": "Leaking Private Chat Screenshots",
+    "section": "IT Act 66E + IPC 354D",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-imposed based on harm caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sharing private conversations or screenshots without consent, leading to harassment or defamation."
+  },
+  {
+    "offense": "Using Spy Cameras in Public Toilets",
+    "section": "IPC 354C + IT Act",
+    "punishment": "3 to 7 years imprisonment and fine",
+    "fine": "As decided by court",
+    "helpline": "100",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Secretly placing cameras in changing rooms, restrooms, or similar places to capture footage without consent."
+  },
+  {
+    "offense": "Circulating Hate Memes",
+    "section": "IPC 153A + IT Act",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Based on communal unrest or public disturbance",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sharing memes that promote hate speech or offend religious, caste, or gender sentiments online."
+  },
+  {
+    "offense": "Clickbait Fraud Ads",
+    "section": "CPA 2019 + IPC 420",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "₹10,000 to ₹1 lakh depending on ad impact",
+    "helpline": "1915",
+    "link": "https://consumeraffairs.nic.in",
+    "explanation": "Running fake product ads or misleading claims to generate clicks, purchases, or financial gain."
+  },
+  {
+    "offense": "AI Voice Cloning Scam",
+    "section": "IT Act + IPC 419/420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Depends on fraud committed using cloned voice",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Impersonating someone's voice using AI tools to deceive family or friends into transferring money."
+  },
+  {
+    "offense": "Making Fake Aadhar Cards",
+    "section": "Aadhar Act Sec 37 + IPC 468",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "₹10,000 to ₹1 lakh",
+    "helpline": "1947",
+    "link": "https://uidai.gov.in",
+    "explanation": "Creating, possessing, or distributing counterfeit Aadhar cards with intent to deceive."
+  },
+  {
+    "offense": "Tapping Someone’s Phone",
+    "section": "Indian Telegraph Act + IPC 66E",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-imposed depending on damage and intent",
+    "helpline": "100",
+    "link": "https://www.dot.gov.in",
+    "explanation": "Illegally listening to or recording someone's calls without their knowledge or legal permission."
+  },
+  {
+    "offense": "Abusive Comments on Live Streams",
+    "section": "IPC 504 + IT Act",
+    "punishment": "Up to 2 years imprisonment or fine",
+    "fine": "Based on mental distress and harassment",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Posting obscene, threatening, or abusive messages during live videos or streams online."
+  },
+  {
+    "offense": "Online Flashing",
+    "section": "IPC 354A + IT Act",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-decided based on trauma caused",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Sending unsolicited sexually explicit content, photos, or video calls to strangers online."
+  },
+  {
+    "offense": "Uploading Fake Resume",
+    "section": "IPC 465 + 468",
+    "punishment": "Up to 2 years imprisonment or fine or both",
+    "fine": "Depends on gain made or fraud committed",
+    "helpline": "100",
+    "link": "https://www.ncs.gov.in",
+    "explanation": "Falsifying qualifications, experience, or identity details on job application portals or resumes."
+  },
+  {
+    "offense": "Trolling Public Figures",
+    "section": "IPC 500 + IT Act",
+    "punishment": "Up to 2 years imprisonment or fine",
+    "fine": "Court-decided based on harm caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Repeatedly insulting or threatening celebrities or public personalities online without justification."
+  },
+  {
+    "offense": "Job Call Scams",
+    "section": "IPC 419 + 420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Equal to money extorted via fraud",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Calling people with fake job offers and collecting fees under false pretenses."
+  },
+  {
+    "offense": "Fake NGO Scam",
+    "section": "IPC 420 + 468",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As decided by court",
+    "helpline": "100",
+    "link": "https://www.ngodarpan.gov.in",
+    "explanation": "Running or advertising a non-existent NGO to collect donations or grant money fraudulently."
+  },
+  {
+    "offense": "Demanding Sexual Favours for Marks/Job",
+    "section": "IPC 354A + Prevention of Corruption Act",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Court-imposed; also may disqualify job holder",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Offering marks, jobs, or promotions in exchange for sexual favors constitutes exploitation and harassment."
+  },
+  {
+    "offense": "Sending Mass Threat Emails",
+    "section": "IPC 506 + IT Act",
+    "punishment": "Up to 7 years imprisonment and/or fine",
+    "fine": "Court may impose based on scale and effect",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Mass sending of threatening emails to institutions or individuals causing fear or disruption."
+  },
+  {
+    "offense": "Leaking Internal Company Data",
+    "section": "IT Act Sec 72 + IPC 408",
+    "punishment": "Up to 3 years imprisonment and ₹5 lakh fine",
+    "fine": "Court-imposed based on data type and usage",
+    "helpline": "100",
+    "link": "https://www.cert-in.org.in",
+    "explanation": "Unauthorized access and disclosure of confidential business or employee data to third parties."
+  },
+  {
+    "offense": "Online Sextortion",
+    "section": "IPC 384 + IT Act",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Varies based on extortion amount and impact",
+    "helpline": "181",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Threatening to leak someone’s private content unless they pay money or fulfill other demands."
+  },
+  {
+    "offense": "Spreading Malware via Email",
+    "section": "IT Act 66 + 43",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "₹5 lakh or more if damage proven",
+    "helpline": "1930",
+    "link": "https://www.cert-in.org.in",
+    "explanation": "Sending infected email attachments or phishing links to damage, spy, or steal information from devices."
+  },
+  {
+    "offense": "Violating Website Terms of Service",
+    "section": "IT Act + Civil Suit",
+    "punishment": "Warning or ban (some cases court case)",
+    "fine": "Depends on site and extent of misuse",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using bots, scraping, or impersonation violating user agreement on major platforms like Facebook or Amazon."
+  },
+  {
+    "offense": "Blackmailing School Students via Instagram",
+    "section": "POCSO Act + IPC 384 + IT Act",
+    "punishment": "7 to 10 years imprisonment and fine",
+    "fine": "Based on psychological damage and blackmail level",
+    "helpline": "1098",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Threatening minors online with exposure of private data/photos in exchange for money or favors."
+  },
+  {
+    "offense": "Using AI to Create Fake Academic Certificates",
+    "section": "IPC 468 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As decided by the court",
+    "helpline": "100",
+    "link": "https://www.education.gov.in",
+    "explanation": "Using AI-generated tools or templates to produce and use forged degrees or report cards."
+  },
+  {
+    "offense": "Misusing Surveillance Drones",
+    "section": "Aircraft Act + IPC 505",
+    "punishment": "Up to 2 years imprisonment or fine",
+    "fine": "Varies based on area flown and intent",
+    "helpline": "100",
+    "link": "https://digitalsky.dgca.gov.in",
+    "explanation": "Flying drones in unauthorized zones or spying on people using aerial devices without permission."
+  },
+  {
+    "offense": "Running Fake Investment Apps",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Equal to the scammed amount or more",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Launching apps or websites claiming to offer high returns on investments and then disappearing with the user’s money."
+  },
+  {
+    "offense": "Streaming Pirated Movies",
+    "section": "Copyright Act 1957",
+    "punishment": "6 months to 3 years imprisonment and ₹50,000 to ₹2,00,000 fine",
+    "fine": "Minimum ₹50,000 per instance",
+    "helpline": "100",
+    "link": "https://copyright.gov.in",
+    "explanation": "Illegally uploading or sharing copyrighted movies or shows online without permission."
+  },
+  {
+    "offense": "Leaking OTT Platform Content",
+    "section": "IT Act 66 + Copyright Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "₹1 lakh or more per leak",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Illegally distributing exclusive web series or films from OTT apps like Netflix, Prime Video etc."
+  },
+  {
+    "offense": "Hosting Scam Websites",
+    "section": "IT Act 66D + IPC 420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Varies with scam impact and victims involved",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Creating websites that pretend to sell products or services but are used to steal money or data."
+  },
+  {
+    "offense": "Fake Lottery/SMS Scams",
+    "section": "IPC 419 + 420",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Equal to the defrauded amount",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sending messages claiming the recipient has won a prize and demanding payment or personal details to claim it."
+  },
+  {
+    "offense": "Using AI to Mimic Celebrities",
+    "section": "IT Act 66 + Copyright/IPR Laws",
+    "punishment": "Up to 3 years imprisonment or fine",
+    "fine": "Court imposed based on impersonation damage",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Creating AI-generated videos or audio clips of public figures without consent for pranks or scams."
+  },
+  {
+    "offense": "Crypto Ponzi Scheme",
+    "section": "Prize Chits and Money Circulation Act + IPC 420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Depends on total money laundered",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Convincing people to invest in crypto with fake promises of returns and paying older users from new user funds."
+  },
+  {
+    "offense": "Cyber Insurance Fraud",
+    "section": "IPC 420 + IT Act",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Court may impose based on claim amount",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Filing fake cybercrime-related insurance claims using manipulated screenshots or chat logs."
+  },
+  {
+    "offense": "Cyber Flash Mobs Without Permission",
+    "section": "IPC 143 + 149 + IT Act",
+    "punishment": "Up to 6 months imprisonment or fine",
+    "fine": "Depends on crowd size and disruption",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Organizing large gatherings through social media without police or civic approval, causing public disorder."
+  },
+  {
+    "offense": "Spoofing Customer Care Numbers",
+    "section": "IPC 419 + IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "As decided by court",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Impersonating official service helpline numbers on Google or ads to steal banking or OTP data."
+  },
+  {
+    "offense": "Auto-clicker Exam Manipulation",
+    "section": "IT Act + Exam Body Guidelines",
+    "punishment": "Debarment + fine or jail if proven mass fraud",
+    "fine": "Institutional penalty",
+    "helpline": "100",
+    "link": "https://www.education.gov.in",
+    "explanation": "Using bots or scripts to automatically attempt multiple exam logins to game online test platforms."
+  },
+  {
+    "offense": "Using Racial Slurs Online",
+    "section": "IPC 153A + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Based on community harm caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Posting hateful or derogatory remarks online based on caste, race, or religion."
+  },
+  {
+    "offense": "Spreading Political Misinformation",
+    "section": "IPC 505(2) + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court imposed depending on impact",
+    "helpline": "1930",
+    "link": "https://eci.gov.in",
+    "explanation": "Creating or sharing false content to influence elections or political views."
+  },
+  {
+    "offense": "Creating Deepfake Election Ads",
+    "section": "IPC 465 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court decides depending on effect",
+    "helpline": "1930",
+    "link": "https://eci.gov.in",
+    "explanation": "Using AI to generate fake political campaign videos that mislead voters."
+  },
+  {
+    "offense": "Online Identity Theft",
+    "section": "IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and ₹1 lakh fine",
+    "fine": "As per court, based on damage done",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Stealing someone’s personal data such as PAN, Aadhar, or bank login to impersonate them."
+  },
+  {
+    "offense": "Buying Explosives Online",
+    "section": "Explosives Act + IPC 286",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "As per explosives amount and risk",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Purchasing, storing, or attempting to acquire banned explosive substances through online or illegal channels."
+  },
+  {
+    "offense": "Fake Reviews for Products",
+    "section": "CPA 2019 + IT Act",
+    "punishment": "Fine or platform ban; up to 2 years if proven malicious",
+    "fine": "₹10,000 to ₹50,000",
+    "helpline": "1915",
+    "link": "https://consumeraffairs.nic.in",
+    "explanation": "Posting fake 5-star or 1-star reviews on e-commerce platforms to mislead buyers or harm competitors."
+  },
+  {
+    "offense": "Unverified Crypto Investment Promotion",
+    "section": "SEBI Act + IT Act",
+    "punishment": "Fine up to ₹25 lakh and jail up to 5 years",
+    "fine": "As per SEBI/ED directives",
+    "helpline": "1800 266 7575",
+    "link": "https://www.sebi.gov.in",
+    "explanation": "Promoting unapproved crypto investment schemes or projects via social media without legal registration."
+  },
+  {
+    "offense": "Tampering Electricity Meter",
+    "section": "Electricity Act 2003 Sec 135",
+    "punishment": "Up to 3 years imprisonment and ₹10,000–₹1 lakh fine",
+    "fine": "As per consumed and stolen units",
+    "helpline": "1912",
+    "link": "https://powermin.gov.in",
+    "explanation": "Using magnets or software to slow down electric meters and reduce billing illegally."
+  },
+  {
+    "offense": "Offensive Religious Memes",
+    "section": "IPC 295A + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court decides based on damage caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Posting or sharing memes that insult or make fun of religious beliefs or figures."
+  },
+  {
+    "offense": "Posting Suicide Instructions",
+    "section": "IPC 306 + IT Act 67",
+    "punishment": "Up to 10 years imprisonment and/or fine",
+    "fine": "As per platform and influence caused",
+    "helpline": "9152987821",
+    "link": "https://tele-manas.mohfw.gov.in",
+    "explanation": "Sharing how-to guides, videos, or tips encouraging people to harm themselves or die by suicide."
+  },
+  {
+    "offense": "Spreading School Bomb Threats via Email",
+    "section": "IPC 505 + 507 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "May include recovery cost for false alarm",
+    "helpline": "100",
+    "link": "https://ncrb.gov.in",
+    "explanation": "Sending hoax emails to schools threatening bombs or violence, causing panic and evacuations."
+  },
+  {
+    "offense": "Faking Death for Insurance",
+    "section": "IPC 420 + Insurance Act",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Equal to insurance fraud value",
+    "helpline": "1930",
+    "link": "https://irdai.gov.in",
+    "explanation": "Pretending to be dead or forging documents to claim life insurance benefits illegally."
+  },
+  {
+    "offense": "Abusing Emergency Helplines",
+    "section": "IPC 182 + 505",
+    "punishment": "Up to 6 months imprisonment and fine",
+    "fine": "₹500 to ₹5,000 depending on misuse",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Making prank calls or repeated misuse of helpline numbers such as 100, 108, or 112."
+  },
+  {
+    "offense": "Revenge Posting of Breakup Messages",
+    "section": "IPC 354D + IT Act 67",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court imposed based on mental trauma caused",
+    "helpline": "1091",
+    "link": "https://shebox.nic.in",
+    "explanation": "Sharing private chats, photos, or emotional content after a breakup to defame or shame an ex-partner."
+  },
+  {
+    "offense": "Threatening Judges or Lawyers",
+    "section": "IPC 506 + 228",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As imposed by the court",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Issuing threats or attempting to influence a judge or advocate involved in a legal case."
+  },
+  {
+    "offense": "Fake Police Officer Impersonation",
+    "section": "IPC 170 + 419",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court may impose based on act committed",
+    "helpline": "100",
+    "link": "https://www.ncrb.gov.in",
+    "explanation": "Pretending to be a police officer to gain trust, extort money, or intimidate individuals."
+  },
+  {
+    "offense": "Poaching Wildlife",
+    "section": "Wildlife Protection Act Sec 9",
+    "punishment": "3 to 7 years imprisonment and ₹25,000+ fine",
+    "fine": "Minimum ₹25,000 or value of animal",
+    "helpline": "1926",
+    "link": "https://www.moef.gov.in",
+    "explanation": "Hunting or capturing wild animals without permission, especially endangered species."
+  },
+  {
+    "offense": "Burning Crackers in No-Cracker Zones",
+    "section": "Environment Protection Act + CrPC 144",
+    "punishment": "Fine and/or detention",
+    "fine": "₹1,000 to ₹5,000",
+    "helpline": "112",
+    "link": "https://cpcb.nic.in",
+    "explanation": "Bursting firecrackers in restricted zones like hospitals, schools, or during banned hours."
+  },
+  {
+    "offense": "Running an Unlicensed Clinic",
+    "section": "Clinical Establishments Act + IPC 419",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "₹10,000 to ₹1,00,000",
+    "helpline": "14416",
+    "link": "https://main.mohfw.gov.in",
+    "explanation": "Operating a medical clinic without a valid license or unqualified staff offering treatment."
+  },
+  {
+    "offense": "Public Display of Weapons",
+    "section": "Arms Act 1959 Sec 25",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As per weapon and license status",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Displaying or brandishing firearms or swords in public places to threaten or show power."
+  },
+  {
+    "offense": "Using Mobile Jammers Illegally",
+    "section": "Indian Telegraph Act + Wireless Telegraphy Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "₹10,000 to ₹50,000",
+    "helpline": "100",
+    "link": "https://dot.gov.in",
+    "explanation": "Installing or using mobile signal jammers without government permission."
+  },
+  {
+    "offense": "Public Shaming via WhatsApp Groups",
+    "section": "IPC 500 + IT Act",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "Based on extent of insult and reach",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sharing defamatory content about someone in WhatsApp or Telegram groups to harass them."
+  },
+  {
+    "offense": "Posting Fake Certificates on LinkedIn",
+    "section": "IPC 468 + IT Act",
+    "punishment": "Up to 7 years imprisonment and/or fine",
+    "fine": "Court decides based on intention",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Uploading or sharing fake degrees or achievements on professional platforms to mislead employers."
+  },
+  {
+    "offense": "Online Dating App Blackmail",
+    "section": "IPC 384 + IT Act",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Varies with damage and emotional trauma",
+    "helpline": "181",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Threatening to leak private images or chats obtained through dating apps like Tinder, Bumble etc."
+  },
+  {
+    "offense": "Threatening to Leak College Exam Papers",
+    "section": "IT Act + IPC 505",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Based on disruption caused",
+    "helpline": "100",
+    "link": "https://education.gov.in",
+    "explanation": "Creating panic by falsely threatening to leak internal or board exam question papers."
+  },
+  {
+    "offense": "Online Suicide Challenges",
+    "section": "IPC 306 + IT Act 67",
+    "punishment": "Up to 10 years imprisonment",
+    "fine": "Court-imposed",
+    "helpline": "9152987821",
+    "link": "https://tele-manas.mohfw.gov.in",
+    "explanation": "Promoting or sharing content that encourages minors or adults to engage in deadly internet games or challenges."
+  },
+  {
+    "offense": "Spreading Child Pornography",
+    "section": "POCSO Act + IT Act Sec 67B",
+    "punishment": "5 to 7 years imprisonment and fine",
+    "fine": "Minimum ₹5 lakh",
+    "helpline": "1098",
+    "link": "https://ncpcr.gov.in",
+    "explanation": "Creating, sharing, downloading, or forwarding sexually explicit content involving minors."
+  },
+  {
+    "offense": "Using VPN for Illegal Access",
+    "section": "IT Act + Copyright Laws",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Based on usage and breach",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using virtual private networks (VPNs) to access banned sites or commit cyber offenses anonymously."
+  },
+  {
+    "offense": "Deepfake Sextortion",
+    "section": "IPC 384 + IT Act 66E",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Court-imposed compensation and recovery",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Creating AI-based fake explicit videos of someone and using it to blackmail them."
+  },
+  {
+    "offense": "Cyber Flashing via AirDrop",
+    "section": "IPC 354A + IT Act",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court may impose based on impact",
+    "helpline": "1091",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sending obscene images to strangers using Bluetooth or sharing services like Apple AirDrop without consent."
+  },
+  {
+    "offense": "Revenge Porn After Breakup",
+    "section": "IT Act 66E + IPC 354C",
+    "punishment": "3 to 7 years imprisonment and fine",
+    "fine": "Decided by court based on trauma caused",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Uploading private videos or images of an ex-partner online to humiliate them."
+  },
+  {
+    "offense": "Hacking Smart Home Devices",
+    "section": "IT Act 66 + 43",
+    "punishment": "Up to 3 years imprisonment and ₹5 lakh fine",
+    "fine": "Based on damage and privacy breach",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Gaining unauthorized access to smart home equipment like CCTV, lights, or smart speakers."
+  },
+  {
+    "offense": "Recording Girls in Trial Rooms",
+    "section": "IPC 354C + IT Act",
+    "punishment": "3 to 7 years imprisonment and fine",
+    "fine": "Decided by court",
+    "helpline": "181",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "Secretly placing cameras in trial rooms to capture videos without a woman’s knowledge or consent."
+  },
+  {
+    "offense": "Running Telegram Leaks Channels",
+    "section": "IT Act + Copyright Act + IPC 420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "₹1 lakh or more depending on damage",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Operating Telegram or WhatsApp groups that leak OTT content, paid courses, or private data."
+  },
+  {
+    "offense": "Using AI Tools to Crack Exams",
+    "section": "IT Act + IPC 420",
+    "punishment": "Debarment and up to 7 years imprisonment",
+    "fine": "Based on intent and benefit gained",
+    "helpline": "100",
+    "link": "https://www.education.gov.in",
+    "explanation": "Using AI-powered tools like ChatGPT or bots to cheat in online exams or entrance tests."
+  },
+  {
+    "offense": "Threatening Girls via Gaming Voice Chat",
+    "section": "IPC 506 + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-decided based on trauma level",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Harassing, abusing, or threatening female gamers through in-game chat or voice communication."
+  },
+  {
+    "offense": "Spreading Nudes in Telegram Dump Groups",
+    "section": "IPC 354C + IT Act 67",
+    "punishment": "3 to 7 years imprisonment and fine",
+    "fine": "As decided by court",
+    "helpline": "181",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Leaking or sharing someone's intimate images in public groups without their consent."
+  },
+  {
+    "offense": "Creating Fake E-Pass During Lockdown",
+    "section": "IPC 468 + Epidemic Act",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "As imposed by district authority",
+    "helpline": "100",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Using Photoshop or generator tools to make fake travel passes during official lockdowns or curfews."
+  },
+  {
+    "offense": "Deepfake Celebrity Scandal Creation",
+    "section": "IPC 469 + IT Act 66",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court may award damages to celebrity",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Generating and distributing fake obscene content featuring public figures using AI tools."
+  },
+  {
+    "offense": "Fake Digital Vaccine Certificate",
+    "section": "Epidemic Act + IPC 420",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "₹10,000 to ₹1,00,000",
+    "helpline": "1075",
+    "link": "https://www.cowin.gov.in",
+    "explanation": "Generating or possessing a fake COVID-19 vaccination certificate to access public services or travel."
+  },
+  {
+    "offense": "Hacking School Portals to Change Marks",
+    "section": "IT Act 66 + IPC 468",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on damage and gain made",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Illegally accessing educational portals and modifying internal exam marks or attendance."
+  },
+  {
+    "offense": "Running Phishing Campaigns",
+    "section": "IT Act 66D",
+    "punishment": "Up to 3 years imprisonment and ₹1 lakh fine",
+    "fine": "Equal to amount scammed or more",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sending fake emails or links that mimic genuine websites to steal login details or money."
+  },
+  {
+    "offense": "Threatening to Leak AI-generated Voice Notes",
+    "section": "IPC 384 + IT Act 66",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court-imposed based on blackmail severity",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using cloned voice samples to blackmail someone by faking controversial or harmful conversations."
+  },
+  {
+    "offense": "Spoofing Aadhaar-based OTP Verification",
+    "section": "Aadhaar Act + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "₹10,000 to ₹1 lakh or more",
+    "helpline": "1947",
+    "link": "https://uidai.gov.in",
+    "explanation": "Faking OTP processes using duplicate SIM or remote access to complete unauthorized Aadhaar verifications."
+  },
+  {
+    "offense": "Pay-and-Use Wi-Fi Scams",
+    "section": "IPC 420 + IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-decided based on harm caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Setting up fake Wi-Fi hotspots in public places to capture payment details or login credentials."
+  },
+  {
+    "offense": "Circulating Morphed Video of Teacher",
+    "section": "IPC 469 + IT Act 66E",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court-imposed compensation + criminal fine",
+    "helpline": "181",
+    "link": "https://shebox.nic.in",
+    "explanation": "Editing and spreading manipulated videos of teachers or principals to insult or defame them."
+  },
+  {
+    "offense": "Leaking Private Telegram Bot Source Code",
+    "section": "IT Act 72 + IPC 408",
+    "punishment": "Up to 3 years imprisonment and ₹5 lakh fine",
+    "fine": "Based on damage and data exposed",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Illegally accessing and leaking source code of bots or tools used on platforms like Telegram."
+  },
+  {
+    "offense": "Fake Complaint Filing for Revenge",
+    "section": "IPC 182 + 211",
+    "punishment": "6 months to 7 years imprisonment and fine",
+    "fine": "Depends on case impact and false charges",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Filing false FIRs or legal complaints intentionally to harass someone or damage their reputation."
+  },
+  {
+    "offense": "Using AI Face Swap for Porn",
+    "section": "IPC 354C + IT Act 67A",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court decides based on psychological harm",
+    "helpline": "181",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using face-swap technology to superimpose someone’s face in explicit adult content without consent."
+  },
+  {
+    "offense": "Threatening a Doctor Online",
+    "section": "IPC 506 + IT Act",
+    "punishment": "Up to 2 years imprisonment and/or fine",
+    "fine": "As decided by court based on threat",
+    "helpline": "14416",
+    "link": "https://www.nmc.org.in",
+    "explanation": "Sending abusive or violent threats to medical professionals through social media or email."
+  },
+  {
+    "offense": "Operating Illegal Call Centers",
+    "section": "IPC 419 + IT Act 66B",
+    "punishment": "Up to 3 years imprisonment and ₹1 lakh fine",
+    "fine": "Based on number of victims and money extorted",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Running fraudulent call centers pretending to be from banks, tech support, or government departments."
+  },
+  {
+    "offense": "Threatening Exam Invigilator",
+    "section": "IPC 353 + 506",
+    "punishment": "Up to 2 years imprisonment and/or fine",
+    "fine": "Depends on intent and disruption",
+    "helpline": "100",
+    "link": "https://education.gov.in",
+    "explanation": "Physically or verbally threatening exam staff during tests to cheat or gain unfair advantage."
+  },
+  {
+    "offense": "Misusing QR Codes to Collect UPI",
+    "section": "IPC 420 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Equal to or more than amount fraudulently collected",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Replacing real merchant QR codes with personal ones to collect money illegally in shops or events."
+  },
+  {
+    "offense": "Posting Suicide Note on Social Media",
+    "section": "IPC 309 (decriminalized) + IT Act",
+    "punishment": "Counseling and intervention, not imprisonment",
+    "fine": "N/A",
+    "helpline": "9152987821",
+    "link": "https://tele-manas.mohfw.gov.in",
+    "explanation": "Posting messages indicating intent to die by suicide; requires mental health help not punishment."
+  },
+  {
+    "offense": "Using Child Images in Memes",
+    "section": "POCSO Act + IT Act",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Court decides based on misuse",
+    "helpline": "1098",
+    "link": "https://ncpcr.gov.in",
+    "explanation": "Using photos or videos of minors in memes or funny videos without parental consent."
+  },
+  {
+    "offense": "Threatening Students with Exam Failure for Favors",
+    "section": "IPC 354A + 506",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Court decides; compensation to victim",
+    "helpline": "1091",
+    "link": "https://www.ncw.nic.in",
+    "explanation": "A teacher or authority misusing power to force students into inappropriate actions by blackmailing them academically."
+  },
+  {
+    "offense": "Creating Fake Government ID Cards",
+    "section": "IPC 468 + 471",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "₹10,000 to ₹1 lakh",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Making or using false identity documents like voter ID, Aadhar, or PAN to impersonate others."
+  },
+  {
+    "offense": "Organizing Illegal IPL Betting Rings",
+    "section": "Public Gambling Act + IPC 420",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "₹5,000 to ₹10,000 or more",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Operating groups or websites that organize betting during IPL or other sporting events."
+  },
+  {
+    "offense": "Selling User Data from Apps",
+    "section": "IT Act 72A",
+    "punishment": "Up to 3 years imprisonment and ₹5 lakh fine",
+    "fine": "Court may impose based on number of users affected",
+    "helpline": "1930",
+    "link": "https://www.cert-in.org.in",
+    "explanation": "App developers or admins sharing or selling user data without consent to third-party advertisers or brokers."
+  },
+  {
+    "offense": "Posting Death Threats to Celebrities",
+    "section": "IPC 506 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court-imposed depending on severity",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sending violent or threatening messages to actors, cricketers, or influencers via online platforms."
+  },
+  {
+    "offense": "Fake Medical Degree Scam",
+    "section": "IPC 468 + 420",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Varies with fraud amount and public risk",
+    "helpline": "14416",
+    "link": "https://www.nmc.org.in",
+    "explanation": "Using or issuing fake MBBS or medical qualification certificates to treat patients unlawfully."
+  },
+  {
+    "offense": "Blackmailing via Edited Screenshots",
+    "section": "IPC 384 + IT Act 66",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court-imposed",
+    "helpline": "181",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Editing WhatsApp or chat screenshots to make them appear scandalous and threatening to leak them."
+  },
+  {
+    "offense": "Leaking Photos from Lost Phones",
+    "section": "IT Act + IPC 406",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-imposed based on misuse",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Accessing and sharing private data from a found or stolen phone without the owner's consent."
+  },
+  {
+    "offense": "AI-Generated Scam Job Interviews",
+    "section": "IPC 420 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As per total fraud committed",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using AI voice or video to pretend to be recruiters and conduct fake job interviews for scams."
+  },
+  {
+    "offense": "Online Identity Swap for Loan Fraud",
+    "section": "IPC 419 + 468",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Equal to loan amount defrauded",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Applying for loans using someone else’s PAN/Aadhaar with forged docs and keeping the money."
+  },
+{
+    "offense": "Spreading AI-Generated Fake Job Offers",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on amount defrauded and number of victims",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Creating AI-generated job advertisements or fake portals to lure applicants into paying registration or processing fees."
+  },
+  {
+    "offense": "Recording Teachers Without Consent",
+    "section": "IPC 354C + IT Act 66E",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-imposed based on mental impact on teacher",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Secretly filming school or college teachers during class and sharing content online without permission."
+  },
+  {
+    "offense": "Streaming Violent Video Games to Children",
+    "section": "IT Act + Juvenile Justice Act",
+    "punishment": "Fine or platform ban; imprisonment if harm proven",
+    "fine": "₹10,000 to ₹50,000",
+    "helpline": "1098",
+    "link": "https://www.ncpcr.gov.in",
+    "explanation": "Live-streaming graphic or violent video games in a manner that promotes harmful behavior among underage viewers."
+  },
+  {
+    "offense": "Hosting Fake Donation Campaigns",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As decided by court depending on donations misused",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Creating fake fundraising pages on crowdfunding platforms or social media to collect money for non-existent causes."
+  },
+  {
+    "offense": "Selling Unapproved Herbal Remedies",
+    "section": "Drugs & Cosmetics Act + FSSAI Act",
+    "punishment": "Up to 5 years imprisonment and ₹1 lakh fine",
+    "fine": "Court-imposed based on public health risk",
+    "helpline": "1800112100",
+    "link": "https://www.fssai.gov.in",
+    "explanation": "Selling herbal or Ayurvedic products without approval from regulatory authorities, possibly causing side effects."
+  },
+  {
+    "offense": "Impersonating Doctors on Social Media",
+    "section": "IPC 419 + IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "As imposed based on patient harm or panic caused",
+    "helpline": "14416",
+    "link": "https://main.mohfw.gov.in",
+    "explanation": "Creating fake social media profiles pretending to be certified doctors and spreading false medical advice."
+  },
+  {
+    "offense": "Creating Misleading App Store Reviews",
+    "section": "IT Act + CPA 2019",
+    "punishment": "Fine and/or platform ban",
+    "fine": "₹10,000 to ₹1 lakh based on app damage",
+    "helpline": "1915",
+    "link": "https://www.consumeraffairs.nic.in",
+    "explanation": "Writing or buying fake reviews on Google Play or App Store to boost or damage an app's reputation."
+  },
+  {
+    "offense": "Fake Emergency Room Drama Pranks",
+    "section": "IPC 505 + IT Act",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-imposed based on public panic caused",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Recording prank videos that simulate medical emergencies or deaths in public spaces for online clout."
+  },
+  {
+    "offense": "Using AI to Forge Loan Approval Letters",
+    "section": "IPC 468 + IT Act 66C",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court-imposed depending on fraud value",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Creating fake bank approval documents or EMI letters using AI to secure loans or scam others."
+  },
+  {
+    "offense": "Social Media Fake Emergency Messages",
+    "section": "IPC 505(1)(b) + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Varies based on panic or loss caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Circulating fake SOS or distress posts claiming emergencies like kidnappings or disasters for likes or donations."
+  },
+  {
+    "offense": "Misusing Screen Recordings in Online Classes",
+    "section": "IT Act 66E + IPC 354D",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-decided based on misuse",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Recording and leaking private portions of video lectures or online classes to defame students or teachers."
+  },
+  {
+    "offense": "Spreading Fake Weather Warnings",
+    "section": "IPC 505(1)(b)",
+    "punishment": "Up to 3 years imprisonment and/or fine",
+    "fine": "Court-imposed depending on disruption caused",
+    "helpline": "1070",
+    "link": "https://ndma.gov.in",
+    "explanation": "Creating or forwarding false alerts about natural disasters, floods or storms to cause panic or misinformation."
+  },
+  {
+    "offense": "Deepfake Celebrity Endorsements",
+    "section": "IT Act + IPC 419 + Copyright Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Court may impose based on damage to image",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using deepfake technology to show celebrities promoting products or services they never endorsed."
+  },
+  {
+    "offense": "Faking Bank Account Freeze Notices",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Equal to amount extorted or higher",
+    "helpline": "1930",
+    "link": "https://www.rbi.org.in",
+    "explanation": "Sending fake messages pretending to be from RBI or banks threatening account suspension to steal OTPs or money."
+  },
+  {
+    "offense": "Abusing Auto-Translate to Spread Rumors",
+    "section": "IPC 505 + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Based on language confusion and public panic",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using translation tools to misinterpret and spread content in multiple languages to incite unrest."
+  },
+  {
+    "offense": "Using QR Code Phishing in Cafes",
+    "section": "IPC 420 + IT Act 66C",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Equal to amount scammed from victims",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Replacing genuine QR codes with fake payment links at restaurants or cafes to steal funds."
+  },
+  {
+    "offense": "Online Auction Scams",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Based on highest fake bid collected",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Creating fake bidding platforms where winners are never given items after paying or are ghosted by sellers."
+  },
+  {
+    "offense": "Misleading Stock Tips via WhatsApp Groups",
+    "section": "SEBI Act + IPC 420",
+    "punishment": "Fine up to ₹25 lakh and jail up to 5 years",
+    "fine": "As decided by SEBI or court",
+    "helpline": "1800 266 7575",
+    "link": "https://www.sebi.gov.in",
+    "explanation": "Spreading stock manipulation tips or fake price predictions in investor groups to pump and dump shares."
+  },
+  {
+    "offense": "Sending Malware via Resume PDFs",
+    "section": "IT Act 66 + IPC 468",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Court-imposed based on system damage",
+    "helpline": "1930",
+    "link": "https://www.cert-in.org.in",
+    "explanation": "Disguising viruses or trojans as resume files emailed to HRs or companies to gain internal access."
+  },
+  {
+    "offense": "Misleading AI Tools for Exam Answers",
+    "section": "IT Act + IPC 420",
+    "punishment": "Debarment + 3 years jail or fine",
+    "fine": "Depends on cheating benefit or loss",
+    "helpline": "100",
+    "link": "https://www.education.gov.in",
+    "explanation": "Using AI chatbots or auto-suggestion tools during online exams or promoting them as unfair advantage sources."
+  },
+  {
+    "offense": "Harassment by Telegram Bot Services",
+    "section": "IPC 354D + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-decided depending on content",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using automated Telegram bots to spread private images or data of individuals without consent."
+  },
+  {
+    "offense": "Using VPNs to Mask Cybercrimes",
+    "section": "IT Act + IPC 420",
+    "punishment": "Additional penalty when caught via IP trace",
+    "fine": "Varies depending on original cybercrime",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using VPN services to hide digital footprints while committing cyber offenses or scams."
+  },
+  {
+    "offense": "Running Fake Academic Scholarship Pages",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on scholarship amount scammed",
+    "helpline": "1930",
+    "link": "https://scholarships.gov.in",
+    "explanation": "Creating fake portals or forms to lure students into paying application fees for non-existent scholarships."
+  },
+  {
+    "offense": "Posting Job Offers on Behalf of Others Without Consent",
+    "section": "IPC 419 + 468",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "As imposed by court for impersonation or data misuse",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Sharing fake job openings or internship opportunities using names/logos of real companies without authorization."
+  },
+  {
+    "offense": "Voice Deepfake Kidnapping Pranks",
+    "section": "IPC 385 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on psychological trauma caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Using AI voice cloning to call parents with fake abduction threats for fun or blackmail."
+  },
+{
+    "offense": "Spoofing Aadhaar Verification Pages",
+    "section": "IT Act 66C + Aadhaar Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "₹10,000 to ₹1 lakh",
+    "helpline": "1947",
+    "link": "https://uidai.gov.in",
+    "explanation": "Creating fake Aadhaar verification pages to steal personal identity and OTP data from users."
+  },
+  {
+    "offense": "Unauthorized Selling of Exam Hall Tickets",
+    "section": "IPC 420 + Exam Body Guidelines",
+    "punishment": "Up to 5 years imprisonment and/or fine",
+    "fine": "Court-imposed depending on fraud",
+    "helpline": "1930",
+    "link": "https://www.education.gov.in",
+    "explanation": "Illegally distributing or selling duplicate or fake admit cards for school/college/government exams."
+  },
+  {
+    "offense": "Using Credit Card Skimming Devices",
+    "section": "IT Act 66 + IPC 379/420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on stolen amount and devices used",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Placing hidden skimmers on ATMs or POS machines to steal credit/debit card details for fraud."
+  },
+  {
+    "offense": "Selling Expired Cosmetic Products",
+    "section": "Drugs & Cosmetics Act Sec 27",
+    "punishment": "Up to 3 years imprisonment and ₹50,000 fine",
+    "fine": "Minimum ₹20,000 depending on harm caused",
+    "helpline": "1800111454",
+    "link": "https://cdsco.gov.in",
+    "explanation": "Knowingly selling expired or substandard makeup or personal care products endangering health."
+  },
+  {
+    "offense": "Streaming Pirated Sports Events",
+    "section": "Copyright Act 1957",
+    "punishment": "Up to 3 years imprisonment and ₹2 lakh fine",
+    "fine": "₹50,000 to ₹2,00,000",
+    "helpline": "100",
+    "link": "https://copyright.gov.in",
+    "explanation": "Broadcasting or sharing live sports events (like IPL, FIFA) without proper rights or permissions."
+  },
+  {
+    "offense": "Tampering EVM Machines",
+    "section": "RP Act + IPC 420 + IT Act",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Decided by Election Commission and court",
+    "helpline": "1950",
+    "link": "https://eci.gov.in",
+    "explanation": "Attempting to manipulate or damage electronic voting machines used in elections."
+  },
+  {
+    "offense": "Online Sale of Wild Animal Products",
+    "section": "Wildlife Protection Act Sec 49B",
+    "punishment": "3 to 7 years imprisonment and fine",
+    "fine": "₹25,000 or more depending on species",
+    "helpline": "1926",
+    "link": "https://moef.gov.in",
+    "explanation": "Illegally selling products made from endangered animals like ivory, leopard skins or tiger claws."
+  },
+  {
+    "offense": "Fake Government Subsidy Forms",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on funds siphoned using fake entries",
+    "helpline": "1930",
+    "link": "https://www.india.gov.in",
+    "explanation": "Filing false documents or running websites to collect farmer/business subsidies fraudulently."
+  },
+  {
+    "offense": "Black Marketing of Oxygen Cylinders",
+    "section": "Essential Commodities Act + IPC 420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "As per court based on harm or death caused",
+    "helpline": "1075",
+    "link": "https://mohfw.gov.in",
+    "explanation": "Illegally hoarding or selling oxygen cylinders and related medical supplies during emergencies."
+  },
+  {
+    "offense": "Online Voter ID Forgery",
+    "section": "IPC 468 + RP Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on intent and election interference",
+    "helpline": "1950",
+    "link": "https://eci.gov.in",
+    "explanation": "Creating fake or duplicate voter ID cards using forged documents to influence elections."
+  },
+  {
+    "offense": "Creating Fake Results for College Portals",
+    "section": "IPC 468 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Depends on manipulation and academic loss",
+    "helpline": "14416",
+    "link": "https://www.education.gov.in",
+    "explanation": "Modifying or injecting false data into result databases to change grades or marksheets."
+  },
+  {
+    "offense": "Disrupting Online Government Meetings",
+    "section": "IPC 505 + IT Act 66",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-decided depending on extent of disruption",
+    "helpline": "1930",
+    "link": "https://www.mha.gov.in",
+    "explanation": "Joining or sabotaging official Zoom/online meetings of authorities using fake IDs or abusive content."
+  },
+  {
+    "offense": "Posting Edited Religious Texts",
+    "section": "IPC 295A + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-imposed depending on community impact",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sharing altered versions of sacred scriptures online to mock or hurt religious sentiments."
+  },
+  {
+    "offense": "Misuse of COVID Negative Certificates",
+    "section": "Epidemic Act + IPC 420",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "Court-imposed based on intent and damage",
+    "helpline": "1075",
+    "link": "https://mohfw.gov.in",
+    "explanation": "Using someone else’s COVID test result to travel or attend restricted events illegally."
+  },
+  {
+    "offense": "Unauthorized Drone Photography in Sensitive Zones",
+    "section": "Aircraft Act + IPC 188",
+    "punishment": "Up to 6 months imprisonment or fine",
+    "fine": "₹5,000 to ₹25,000",
+    "helpline": "100",
+    "link": "https://digitalsky.dgca.gov.in",
+    "explanation": "Flying drones near airports, government offices, or restricted zones without approval."
+  },
+  {
+    "offense": "Impersonating Government Officials in Emails",
+    "section": "IPC 419 + IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Based on scam amount or misuse",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sending emails using fake IDs that mimic officers from RBI, Income Tax, or other ministries."
+  },
+  {
+    "offense": "Online Astrology Fraud",
+    "section": "IPC 420",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Depends on financial loss to victim",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Running fake astrology or numerology sites/apps that ask for large sums to remove 'curses'."
+  },
+  {
+    "offense": "Illegal Sale of SIM Cards",
+    "section": "IPC 420 + Telegraph Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "₹10,000 to ₹50,000",
+    "helpline": "100",
+    "link": "https://www.dot.gov.in",
+    "explanation": "Selling SIM cards activated using forged documents or to anonymous buyers for illegal purposes."
+  },
+  {
+    "offense": "Leaking OTT Platform Credentials",
+    "section": "IT Act 66 + Copyright Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-imposed based on damage to platform",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sharing or selling hacked Netflix, Prime Video, or Hotstar accounts on Telegram or public forums."
+  },
+  {
+    "offense": "Sharing Leaked Exam Answers on Telegram",
+    "section": "Exam Acts + IPC 420",
+    "punishment": "Up to 10 years imprisonment and fine",
+    "fine": "Varies with exam level and impact",
+    "helpline": "1930",
+    "link": "https://www.education.gov.in",
+    "explanation": "Forwarding or selling answer keys of competitive/government exams through encrypted apps."
+  },
+  {
+    "offense": "Creating Scam Insurance Portals",
+    "section": "IPC 420 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Based on premium value scammed",
+    "helpline": "1930",
+    "link": "https://irdai.gov.in",
+    "explanation": "Designing fake websites or apps to collect insurance premiums from unaware users."
+  },
+  {
+    "offense": "Faking Work-From-Home Job Offers",
+    "section": "IPC 420 + IT Act 66D",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Depends on total money scammed",
+    "helpline": "1930",
+    "link": "https://www.cybercrime.gov.in",
+    "explanation": "Luring users with fake WFH jobs requiring registration or training fees and then disappearing."
+  },
+  {
+    "offense": "Illegally Streaming Reality Shows",
+    "section": "Copyright Act + IT Act",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "₹50,000 to ₹2 lakh",
+    "helpline": "1930",
+    "link": "https://copyright.gov.in",
+    "explanation": "Broadcasting copyrighted content like Bigg Boss, Khatron ke Khiladi, etc., without license."
+  },
+  {
+    "offense": "Crypto Mining Using Hacked Devices",
+    "section": "IT Act 66 + IPC 406",
+    "punishment": "Up to 5 years imprisonment and ₹5 lakh fine",
+    "fine": "Based on energy misuse and damage",
+    "helpline": "1930",
+    "link": "https://www.cert-in.org.in",
+    "explanation": "Infecting systems with malware to silently use their power for cryptocurrency mining."
+  },
+  {
+    "offense": "Fake Fitness App Subscriptions",
+    "section": "IT Act + CPA 2019",
+    "punishment": "Up to 2 years imprisonment and fine",
+    "fine": "₹10,000 to ₹1 lakh",
+    "helpline": "1915",
+    "link": "https://consumeraffairs.nic.in",
+    "explanation": "Selling app subscriptions promising health tracking or training without delivering any real service."
+  },
+  {
+    "offense": "Selling Illegal Weapon Replicas Online",
+    "section": "Arms Act + IPC 505",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Court-decided",
+    "helpline": "100",
+    "link": "https://mha.gov.in",
+    "explanation": "Selling airsoft or metal weapons resembling real firearms that can be used to intimidate or commit crimes."
+  },
+  {
+    "offense": "Sending Fake Police Verification Alerts",
+    "section": "IPC 419 + IT Act 66C",
+    "punishment": "Up to 3 years imprisonment and fine",
+    "fine": "Court-decided based on harm caused",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Sending messages posing as police verification agents to collect private documents or money."
+  },
+  {
+    "offense": "Using AI to Scam through Voice Assistants",
+    "section": "IPC 420 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Depends on amount and voice misuse",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Programming smart devices (like Alexa or Google Home) to mimic users and scam others."
+  },
+  {
+    "offense": "Creating NFT Scams Using Fake Art",
+    "section": "IT Act + IPC 420",
+    "punishment": "Up to 5 years imprisonment and fine",
+    "fine": "Based on NFT sale value",
+    "helpline": "1930",
+    "link": "https://cybercrime.gov.in",
+    "explanation": "Uploading plagiarized or AI-generated art as NFTs and selling them fraudulently on digital marketplaces."
+  },
+  {
+    "offense": "Using AI Tools to Generate Fake Proofs of Income",
+    "section": "IPC 468 + IT Act",
+    "punishment": "Up to 7 years imprisonment and fine",
+    "fine": "Varies with fraud value",
+    "helpline": "1930",
+    "link": "https://incometax.gov.in",
+    "explanation": "Creating fake salary slips, IT returns, or bank statements using AI for loans or visas."
+  }
+]

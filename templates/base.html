@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- AOS Animate On Scroll CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Lexpert - Your Digital Legal Companion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            ⚖️ Lexpert
+            <div class="nav-underline"></div>
+            <div class="slogan-brand">Your Digital Legal Companion</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/directory">Directory</a></li>
+            <li><a href="/victim">Victim Help</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/notes">📓 Notes</a></li>
+            {% if session.get("user_id") %}
+            <li><a href="/logout">Logout ({{ session.get("username") }})</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider"></span>
+        </label>
+        <span id="themeLabel">Dark Mode</span>
+    </div>
+
+    <!-- Main Page Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+   <footer>
+    <p class="footer-title">LEXPERT ⚖️</p>
+    <p class="footer-sub">Empowering You with Legal Knowledge.</p>
+</footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeSwitch = document.getElementById("themeSwitch");
+        const body = document.body;
+
+if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-theme");
+    themeSwitch.checked = true;
+    document.getElementById("themeLabel").textContent = "Bright Mode";
+} else {
+    document.getElementById("themeLabel").textContent = "Dark Mode";
+}
+
+themeSwitch.addEventListener("change", () => {
+    const label = document.getElementById("themeLabel");
+    if (themeSwitch.checked) {
+        body.classList.add("light-theme");
+        localStorage.setItem("theme", "light");
+        label.textContent = "Bright Mode";
+    } else {
+        body.classList.remove("light-theme");
+        localStorage.setItem("theme", "dark");
+        label.textContent = "Dark Mode";
+    }
+});
+    </script>
+
+<!-- AOS Animate On Scroll JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>

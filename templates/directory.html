@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section style="margin: 40px;" data-aos="fade-up">
+
+   <h2 style="text-align:center;" data-aos="fade-down">Full Offense Directory</h2>
+
+    <div style="overflow-x:auto;" data-aos="zoom-in" data-aos-delay="200">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Offense</th>
+                    <th>IPC Section</th>
+                    <th>Punishment</th>
+                    <th>Fine</th>
+                    <th>Explanation</th>
+                    <th>Helpline</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in offenses %}
+<tr data-aos="fade-up" data-aos-delay="100">
+
+                    <td>{{ item.offense }}</td>
+                    <td>{{ item.section }}</td>
+                    <td>{{ item.punishment }}</td>
+                    <td>{{ item.fine }}</td>
+                    <td>{{ item.explanation }}</td>
+                    <td><a href="tel:{{ item.helpline }}">{{ item.helpline }}</a></td>
+                    <td><a href="{{ item.link }}" target="_blank">Visit</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

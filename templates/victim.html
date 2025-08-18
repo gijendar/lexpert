@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section style="text-align: center; margin-top: 30px;" data-aos="zoom-in">
+    <h2 data-aos="fade-down" data-aos-duration="700">Victim Help Desk</h2>
+    <p data-aos="fade-up" data-aos-duration="700">
+        Select or search the offense you faced to get legal help and contact info.
+    </p>
+
+    <!-- 🔹 Dropdown + Blue Get Help -->
+    <form method="POST" action="/search">
+        <select name="query" required>
+            <option value="" disabled selected>Select an offense...</option>
+            {% for offense in offense_list %}
+                <option value="{{ offense }}">{{ offense }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" style="background-color: red;">Get Help</button>
+    </form>
+</section>
+
+    <!-- 🔹 Type-to-Search + Red Search -->
+    <div data-aos="zoom-out" data-aos-duration="900" 
+         style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 25px;">
+        <input type="text" id="victimOffenseSearch" placeholder="Type to search offenses..."
+               style="padding: 12px 16px; width: 280px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc;">
+        <button type="button" onclick="searchVictimOffense()" 
+                style="padding: 10px 20px; background-color: brown; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+            Get Help
+        </button>
+    </div>
+</section>
+
+<!-- 🔹 Victim Dropdown Result -->
+{% if selected %}
+<section style="margin-top: 40px; text-align: center;" data-aos="fade-up" data-aos-duration="1000">
+    <div class="victim-result-card" style="
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        color: #fff;
+        border-left: 4px solid royalblue;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+
+        <h3 style="color: royalblue;">⚖️ Help Info for "{{ selected.offense }}"</h3>
+        <p><strong>Section:</strong> {{ selected.section }}</p>
+        <p><strong>Punishment:</strong> {{ selected.punishment }}</p>
+        <p><strong>Fine:</strong> {{ selected.fine }}</p>
+        <p><strong>Explanation:</strong> {{ selected.explanation }}</p>
+        <p><strong>Helpline:</strong> 📞 <a href="tel:{{ selected.helpline }}" style="color: #0cf;">{{ selected.helpline }}</a></p>
+        <p><strong>Help Site:</strong> 🌐 <a href="{{ selected.link }}" target="_blank" style="color: #0cf;">{{ selected.link }}</a></p>
+
+        <!-- ✅ Add to Notes -->
+        <div style="margin-top: 20px; text-align: center;">
+            <button class="notes-btn" onclick='addToNotes({
+                "offense": "{{ selected.offense }}",
+                "section": "{{ selected.section }}",
+                "punishment": "{{ selected.punishment }}",
+                "fine": "{{ selected.fine }}"
+            })'>📝 Add to Notes</button>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- 🔹 Victim Search Results -->
+<div id="victimSearchResults" style="margin-top: 40px; text-align: center;"></div>
+
+<script>
+function searchVictimOffense() {
+    const query = document.getElementById('victimOffenseSearch').value.trim();
+    if (!query) return;
+
+    fetch(`/search_offense?q=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(data => {
+            const resultsDiv = document.getElementById('victimSearchResults');
+            resultsDiv.innerHTML = '';
+
+            if (data.length === 0) {
+                resultsDiv.innerHTML = '<p>No offenses found matching your query.</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                const card = `
+    <div class="victim-result-card" data-aos="fade-up" data-aos-duration="1000" style="
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        color: #fff;
+        border-left: 4px solid brown;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+        
+        <h3 style="color: brown;">⚖️ ${item.offense}</h3>
+        <p><strong>Section:</strong> ${item.section}</p>
+        <p><strong>Punishment:</strong> ${item.punishment}</p>
+        <p><strong>Fine:</strong> ${item.fine}</p>
+        <p><strong>Explanation:</strong> ${item.explanation}</p>
+        <p><strong>Helpline:</strong> 📞 ${item.helpline}</p>
+        <p><strong>Help Site:</strong> 🌐 <a href="${item.link}" target="_blank" style="color: #0cf;">${item.link}</a></p>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <button class="notes-btn" onclick='addToNotes({
+                "offense": "${item.offense}",
+                "section": "${item.section}",
+                "punishment": "${item.punishment}",
+                "fine": "${item.fine}"
+            })'>📝 Add to Notes</button>
+        </div>
+    </div>
+                `;
+                resultsDiv.innerHTML += card;
+                if (typeof AOS !== "undefined") AOS.refresh();
+            });
+        });
+}
+
+// ✅ Notes function (already in your old file)
+function addToNotes(data) {
+    let notes = JSON.parse(localStorage.getItem("notesData")) || [];
+    const alreadyExists = notes.some(item =>
+        item.offense === data.offense && item.section === data.section
+    );
+    if (!alreadyExists) {
+        notes.push(data);
+        localStorage.setItem("notesData", JSON.stringify(notes));
+        alert("✅ Added to Notes!");
+    } else {
+        alert("ℹ️ Already in Notes.");
+    }
+}
+</script>
+
+{% endblock %}

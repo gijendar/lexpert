@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script>
+const offenseList = {{ offense_data | tojson }};
+</script>
+
+<div class="notes-section" data-aos="fade-down">
+    <h2>📓 Smart Notes</h2>
+    <p class="notes-subtitle" data-aos="fade-up" data-aos-delay="200">Add IPC Sections or Offenses...</p>
+
+    <!-- Input Field -->
+    <div class="notes-input-area" data-aos="zoom-in" data-aos-delay="400">
+
+        <input type="text" id="noteInput" placeholder="Enter IPC section or offense name...">
+        <button onclick="addToNotesManual()">➕ Add to Notes</button>
+    </div>
+
+    <!-- Export Button -->
+    <div style="margin-bottom: 20px;" data-aos="fade-up" data-aos-delay="600">
+
+        <button onclick="exportNotesToPDF()" class="notes-btn">🧾 Export to PDF</button>
+    </div>
+
+    <!-- Notes Table -->
+    <table id="notesTable" data-aos="zoom-in" data-aos-delay="800">
+
+        <thead>
+            <tr>
+                <th>Offense</th>
+                <th>IPC Section</th>
+                <th>Punishment</th>
+                <th>Fine</th>
+                <th>Helpline</th>
+                <th>Help Site</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JS will insert rows here -->
+        </tbody>
+    </table>
+</div>
+
+<!-- jsPDF + AutoTable -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+<!-- Main Script -->
+<script>
+function addToNotesManual() {
+    const input = document.getElementById("noteInput").value.trim().toLowerCase();
+    if (!input) return;
+
+    const match = offenseList.find(o =>
+        o.offense.toLowerCase() === input || o.section.toLowerCase() === input
+    );
+
+    if (match) {
+        const data = {
+            offense: match.offense,
+            section: match.section,
+            punishment: match.punishment,
+            fine: match.fine,
+            helpline: match.helpline || '',
+            link: match.link || ''
+        };
+        saveToLocalStorage(data);
+        addRowToTable(data);
+        document.getElementById("noteInput").value = "";
+    } else {
+        alert("❌ No match found.");
+    }
+}
+
+function saveToLocalStorage(data) {
+    let notes = JSON.parse(localStorage.getItem("notesData")) || [];
+    const exists = notes.some(n => n.offense === data.offense && n.section === data.section);
+    if (!exists) {
+        notes.push(data);
+        localStorage.setItem("notesData", JSON.stringify(notes));
+    }
+}
+
+function addRowToTable(data) {
+    const table = document.getElementById("notesTable").querySelector("tbody");
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${data.offense}</td>
+        <td>${data.section}</td>
+        <td>${data.punishment}</td>
+        <td>${data.fine}</td>
+        <td>${data.helpline || '-'}</td>
+        <td><a href="${data.link}" target="_blank">${data.link || '-'}</a></td>
+        <td><button class="delete-btn" onclick='removeFromLocalStorage(this, "${data.offense}", "${data.section}")'>❌</button></td>
+    `;
+    table.appendChild(row);
+row.setAttribute("data-aos", "fade-up");
+row.setAttribute("data-aos-delay", 100 * document.querySelectorAll("#notesTable tbody tr").length);
+
+}
+
+function removeFromLocalStorage(button, offense, section) {
+    let notes = JSON.parse(localStorage.getItem("notesData")) || [];
+    notes = notes.filter(item => !(item.offense === offense && item.section === section));
+    localStorage.setItem("notesData", JSON.stringify(notes));
+
+    const row = button.closest("tr");
+    if (row) row.remove();
+}
+
+function exportNotesToPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const headers = [["Offense", "IPC Section", "Punishment", "Fine", "Helpline", "Help Site"]];
+    const data = [];
+
+    const rows = document.querySelectorAll("#notesTable tbody tr");
+    rows.forEach(row => {
+        const cols = row.querySelectorAll("td");
+        if (cols.length >= 6) {
+            data.push([
+                cols[0].innerText,
+                cols[1].innerText,
+                cols[2].innerText,
+                cols[3].innerText,
+                cols[4].innerText,
+                cols[5].innerText
+            ]);
+        }
+    });
+
+    doc.text("Lexpert Smart Notes", 14, 15);
+    doc.autoTable({
+        startY: 20,
+        head: headers,
+        body: data,
+        theme: 'grid',
+        headStyles: { fillColor: [0, 217, 255] },
+    });
+
+    doc.save("lexpert-notes.pdf");
+}
+
+window.onload = function () {
+    const notes = JSON.parse(localStorage.getItem("notesData")) || [];
+    notes.forEach(data => addRowToTable(data));
+}
+</script>
+{% endblock %}

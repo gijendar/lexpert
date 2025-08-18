@@ -1,0 +1,145 @@
+	{% extends 'base.html' %}
+
+{% block content %}
+<section style="text-align: center; margin-top: 30px;" data-aos="zoom-in">
+    <h2 data-aos="fade-down">Find Legal Info Instantly</h2>
+    <p data-aos="fade-up" data-aos-delay="200">Select any offense below to know the IPC Section, Fine, and Punishment.</p>
+
+    
+    <!-- Dropdown for manual selection -->
+    <form method="POST" action="/search">
+        <select name="query" required>
+            <option value="" disabled selected>Select an offense...</option>
+            {% for offense in offense_list %}
+                <option value="{{ offense }}">{{ offense }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Search</button>
+    </form>
+</section>
+
+<!-- 🔍 Search Box + Button Below with Animation -->
+<div style="margin-top: 30px; text-align: center;" data-aos="fade-up" data-aos-delay="300">
+    <input type="text" id="offenseSearch" placeholder="Type to search offenses..." 
+           style="padding: 12px 16px; width: 400px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc; transform: translateX(10px);">
+<br><br>
+    
+    <button type="button" onclick="searchOffense()" 
+            style="padding: 10px 22px; background-color: brown; color: white; border: none; border-radius: 6px; font-weight: bold; margin-left: 10px; cursor: pointer; transform: translateX(0px);">
+        Search
+    </button>
+</div>
+
+    <br><br>
+
+<!-- 🔎 Dynamic Search Results -->
+<div id="searchResults" style="margin-top: 30px; text-align: center;"></div>
+
+{% if results %}
+<section style="margin-top: 40px; text-align: center;">
+    <h3>Results for "{{ query }}"</h3>
+    <div style="display: inline-block; text-align: left; max-width: 600px; width: 100%;">
+       {% for item in results %}
+<div class="result-card" data-aos="fade-up" data-aos-delay="100">
+    <h4>⚖️ {{ item.offense }}</h4>
+    <p><strong>Section:</strong> {{ item.section }}</p>
+    <p><strong>Punishment:</strong> {{ item.punishment }}</p>
+    <p><strong>Fine:</strong> {{ item.fine }}</p>
+    <p><strong>Explanation:</strong> {{ item.explanation }}</p>
+    <p><strong>Helpline:</strong> 📞 {{ item.helpline }}</p>
+    <p><strong>Help Site:</strong> 🌐 <a href="{{ item.link }}" target="_blank">{{ item.link }}</a></p>
+
+    <!-- ✅ Add to Notes Button -->
+    <button class="notes-btn" onclick='addToNotes({
+        "offense": "{{ item.offense }}",
+        "section": "{{ item.section }}",
+        "punishment": "{{ item.punishment }}",
+        "fine": "{{ item.fine }}"
+    })'>📝 Add to Notes</button>
+</div>
+{% endfor %}
+    </div>
+</section>
+
+{% elif query %}
+<section style="margin-top: 40px; text-align: center;">
+    <h3>No results found for "{{ query }}"</h3>
+</section>
+{% endif %}
+
+<script>
+function addToNotes(data) {
+    let notes = JSON.parse(localStorage.getItem("notesData")) || [];
+    const alreadyExists = notes.some(item =>
+        item.offense === data.offense && item.section === data.section
+    );
+    if (!alreadyExists) {
+        notes.push(data);
+        localStorage.setItem("notesData", JSON.stringify(notes));
+        alert("✅ Added to Notes!");
+    } else {
+        alert("ℹ️ Already in Notes.");
+    }
+}
+
+// 🔎 Search Offense Function
+function searchOffense() {
+    const query = document.getElementById('offenseSearch').value.trim();
+    if (!query) return;
+
+    fetch(`/search_offense?q=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(data => {
+            const resultsDiv = document.getElementById('searchResults');
+            resultsDiv.innerHTML = '';
+
+            if (data.length === 0) {
+                resultsDiv.innerHTML = '<p>No offenses found matching your query.</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                const card = `
+   <div class="result-card" data-aos="zoom-in" data-aos-duration="600" style=" ...
+ 	
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        color: #fff;
+        border-left: 4px solid #00bfff;
+        padding: 15px;
+        margin: 20px auto;
+        max-width: 700px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    ">
+        <h4 style="color: #00bfff;">⚖️ ${item.offense}</h4>
+        <p><strong>Section:</strong> ${item.section}</p>
+        <p><strong>Punishment:</strong> ${item.punishment}</p>
+        <p><strong>Fine:</strong> ${item.fine}</p>
+        <p><strong>Explanation:</strong> ${item.explanation}</p>
+        <p><strong>Helpline:</strong> 📞 ${item.helpline}</p>
+        <p><strong>Help Site:</strong> 🌐 <a href="${item.link}" target="_blank" style="color: #0cf;">${item.link}</a></p>
+        <button class="notes-btn" onclick='addToNotes(${JSON.stringify({
+            offense: item.offense,
+            section: item.section,
+            punishment: item.punishment,
+            fine: item.fine
+        })})'>📝 Add to Notes</button>
+    </div>
+`;
+
+
+                resultsDiv.innerHTML += card;
+AOS.refresh();
+
+            });
+        });
+}
+window.addEventListener("load", function () {
+    document.querySelector('select[name="query"]').selectedIndex = 0;
+});
+
+</script>
+{% endblock %}
