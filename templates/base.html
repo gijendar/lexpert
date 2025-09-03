@@ -25,6 +25,8 @@
             <li><a href="/victim">Victim Help</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/notes">📓 Notes</a></li>
+    <li><a href="/feedback">Feedback</a></li> <!-- ✅ New Feedback link -->
+
             {% if session.get("user_id") %}
             <li><a href="/logout">Logout ({{ session.get("username") }})</a></li>
             {% endif %}

@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+body {
+  background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 20px;
+}
+
+.feedback-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.feedback-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.feedback-card p {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.star-rating {
+  display: flex; 
+  justify-content: center;
+flex-direction: row-reverse;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffd700;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  padding: 12px;
+  resize: none;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff8c00, #ff0080);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(255, 0, 128, 0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div class="feedback-container">
+  <div class="feedback-card" data-aos="zoom-in">
+      <h2>✨ We Value Your Feedback</h2>
+      <p>Logged in as <strong>{{ session.get("username") }}</strong></p>
+
+      <form method="POST" action="/feedback">
+          <!-- Star Rating -->
+          <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+          </div>
+
+          <!-- Review -->
+          <textarea name="review" id="review" rows="4" placeholder="Write your feedback here..." required></textarea>
+
+          <!-- Submit -->
+          <button type="submit">Submit Feedback</button>
+      </form>
+  </div>
+</div>
+{% endblock %}

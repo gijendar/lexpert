@@ -1,206 +1,192 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Admin Dashboard | Lexpert</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      padding: 20px;
-      color: white;
-      overflow-x: hidden;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .container { padding: 20px; }
-
-    h1, h2 {
-      color: white;
-      text-shadow: 1px 1px 4px black;
-      animation: slideIn 1.2s ease-out;
-    }
-    @keyframes slideIn {
-      from { transform: translateX(-100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    /* 🔥 Stats Cards */
-    .stats {
-      display: flex;
-      gap: 20px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-    .card {
-      flex: 1;
-      min-width: 200px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-      animation: zoomIn 0.8s ease-in-out;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 0px 20px rgba(0,123,255,0.6);
-    }
-    .card h3 {
-      margin: 0;
-      font-size: 18px;
-      font-weight: bold;
-      color: #00d4ff;
-    }
-    .card p {
-      font-size: 28px;
-      margin: 10px 0 0;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    @keyframes zoomIn {
-      from { transform: scale(0.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    /* Tables */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 30px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-      border-radius: 8px;
-      overflow: hidden;
-      animation: zoomIn 0.8s ease-in-out;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-      transition: background 0.3s ease;
-    }
-    th {
-      background: linear-gradient(45deg, #007BFF, #0056b3);
-      color: white;
-    }
-    tr:nth-child(even) { background: rgba(255, 255, 255, 0.08); }
-    tr:hover {
-      background: rgba(0, 123, 255, 0.2);
-      transform: scale(1.01);
-      transition: transform 0.2s ease-in-out, background 0.3s ease;
-    }
-
-    /* Logout button */
-    .logout {
-      float: right;
-      background: #dc3545;
-      color: white;
-      padding: 8px 14px;
-      text-decoration: none;
-      border-radius: 6px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-    }
-    .logout:hover {
-      background: #b02a37;
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a class="logout" href="{{ url_for('logout') }}">Logout</a>
-    <h1>Admin Dashboard</h1>
-
-    <!-- ✅ Stats Cards -->
-    <div class="stats">
-      <div class="card">
-        <h3>Total Users</h3>
-        <p id="totalUsers">0</p>
-      </div>
-      <div class="card">
-        <h3>Active Users</h3>
-        <p id="activeUsers">0</p>
-      </div>
-      <div class="card">
-        <h3>Total Logins</h3>
-        <p id="totalLogins">0</p>
-      </div>
-    </div>
-
-    <!-- ✅ All Users -->
-    <h2>All Users</h2>
-    <table>
-      <tr>
-        <th>ID</th><th>Username</th><th>Email</th><th>Role</th><th>Created At</th>
-      </tr>
-      {% for user in users %}
-      <tr>
-        <td>{{ user['id'] }}</td>
-        <td>{{ user['username'] }}</td>
-        <td>{{ user['email'] }}</td>
-        <td>{{ user['role'] }}</td>
-        <td>{{ user['created_at'] }}</td>
-      </tr>
-      {% endfor %}
-    </table>
-
-    <!-- ✅ Login + Logout History -->
-    <h2>Login History</h2>
-    <table>
-      <tr>
-        <th>Username</th><th>Login Time</th><th>Logout Time</th>
-      </tr>
-      {% for h in history %}
-      <tr>
-        <td>{{ h['username'] }}</td>
-        <td>{{ h['login_time'] }}</td>
-        <td>
-          {% if h['logout_time'] %}
-            {{ h['logout_time'] }}
-          {% else %}
-            <span style="color: #00ff88; font-weight: bold;">Still Logged In</span>
-          {% endif %}
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
+{% extends "admin_base.html" %}
+{% block title %}Dashboard · Lexpert{% endblock %}
+{% block crumb %}Admin / Dashboard{% endblock %}
+{% block topbar_tools %}
+  <div class="search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round"/></svg>
+    <input id="userSearch" type="search" placeholder="Search users…" oninput="filterUsers()" />
   </div>
-
-  <!-- 🔥 Animated Counter Script -->
-  <script>
-    function animateCounter(id, target) {
-      let counter = document.getElementById(id);
-      let count = 0;
-      let step = Math.ceil(target / 50);
-      let interval = setInterval(() => {
-        count += step;
-        if (count >= target) {
-          count = target;
-          clearInterval(interval);
-        }
-        counter.textContent = count;
-      }, 40);
+{% endblock %}
+{% block content %}
+<!-- Stats -->
+<div class="grid cols-3 fade-in" style="margin-bottom:16px;">
+  <div class="stat">
+    <div class="icon">👥</div>
+    <div>
+      <div class="value">{{ users|length }}</div>
+      <div class="muted">Total Users</div>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="icon">🟢</div>
+    <div>
+      <div class="value">{{ active_users }}</div>
+      <div class="muted">Active Sessions</div>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="icon">⏱️</div>
+    <div>
+      <div class="value">{{ history|length }}</div>
+      <div class="muted">Total Logins</div>
+    </div>
+  </div>
+</div>
+<!-- Users -->
+<section class="card fade-in">
+  <div class="card-header">
+    <div class="row">
+      <strong>All Users</strong>
+      <span class="chip">{{ users|length }} records</span>
+    </div>
+    <div class="row">
+      <button class="btn" onclick="exportTable('usersTable','users.csv')">Export CSV</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div style="overflow:auto;">
+      <table class="table" id="usersTable">
+        <thead>
+          <tr>
+            <th style="width:70px;">ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th style="width:120px;">Role</th>
+            <th style="width:190px;">Created At</th>
+            <th style="width:90px;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="usersBody">
+        {% for user in users %}
+          <tr data-row>
+            <td>{{ user['id'] }}</td>
+            <td data-key="username">{{ user['username'] }}</td>
+            <td data-key="email">{{ user['email'] or '-' }}</td>
+            <td>
+              {% if user['role']=='admin' %}
+                <span class="chip success">admin</span>
+              {% else %}
+                <span class="chip">user</span>
+              {% endif %}
+            </td>
+            <td>{{ user['created_at'] }}</td>
+            <td>
+              {% if user['role'] != 'admin' %}
+                <button class="btn btn-danger" onclick="confirmDelete({{ user['id'] }}, '{{ user['username']|e }}')">Remove</button>
+              {% else %}
+                <button class="btn" disabled title="Admins cannot be deleted">—</button>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<!-- Login History -->
+<section class="card fade-in" style="margin-top:16px;">
+  <div class="card-header">
+    <div class="row">
+      <strong>Login History</strong>
+      <span class="chip">{{ history|length }} entries</span>
+    </div>
+    <div class="row">
+      <button class="btn" onclick="exportTable('historyTable','login_history.csv')">Export CSV</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div style="overflow:auto;">
+      <table class="table" id="historyTable">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Login Time</th>
+            <th>Logout Time / Status</th>
+            <th style="width:90px;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody">
+        {% for h in history %}
+          <tr data-row id="history-row-{{ h['id'] }}">
+            <td>{{ h['username'] }}</td>
+            <td>{{ h['login_time'] }}</td>
+            <td>
+              {% if h['logout_time'] %}
+                {{ h['logout_time'] }}
+              {% else %}
+                <span class="chip success">Active</span>
+              {% endif %}
+            </td>
+            <td>
+              <button class="btn btn-danger" onclick="confirmDeleteHistory({{ h['id'] }})">Remove</button>
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+  // Client-side filter for Users table
+  function filterUsers(){
+    const q = (document.getElementById('userSearch').value || '').toLowerCase();
+    document.querySelectorAll('#usersBody [data-row]').forEach(tr=>{
+      const name = (tr.querySelector('[data-key="username"]').textContent||'').toLowerCase();
+      const email = (tr.querySelector('[data-key="email"]').textContent||'').toLowerCase();
+      tr.style.display = (name.includes(q) || email.includes(q)) ? '' : 'none';
+    });
+  }
+  // Confirm + Delete user via POST
+  async function confirmDelete(id, username){
+    if(!confirm(`Remove user "${username}"?`)) return;
+    try{
+      const res = await fetch(`/delete_user/${id}`, { method:'POST' });
+      const data = await res.json();
+      if(data.success){
+        // Remove row from table
+        [...document.querySelectorAll('#usersBody tr')].forEach(tr=>{
+          if(tr.firstElementChild && tr.firstElementChild.textContent == String(id)){
+            tr.remove();
+          }
+        });
+      }else{
+        alert(data.error || 'Failed to delete user.');
+      }
+    }catch(e){
+      alert('Network error.');
     }
-
-    // Values from backend
-    let totalUsers = {{ users|length }};
-    let totalLogins = {{ history|length }};
-    let activeUsers = {{ history|selectattr("logout_time", "none")|list|length }};
-
-    animateCounter("totalUsers", totalUsers);
-    animateCounter("activeUsers", activeUsers);
-    animateCounter("totalLogins", totalLogins);
-  </script>
-</body>
-</html>
+  }
+  // Confirm + Delete login history entry via POST
+  async function confirmDeleteHistory(id){
+    if(!confirm(`Remove this login history entry?`)) return;
+    try{
+      const res = await fetch(`/delete_history/${id}`, { method:'POST' });
+      const data = await res.json();
+      if(data.success){
+        // Remove row from table
+        const row = document.getElementById(`history-row-${id}`);
+        if(row) row.remove();
+      }else{
+        alert(data.error || 'Failed to delete entry.');
+      }
+    }catch(e){
+      alert('Network error.');
+    }
+  }
+  // Export table to CSV
+  function exportTable(tableId, filename){
+    const table = document.getElementById(tableId);
+    const rows = [...table.querySelectorAll('tr')].map(tr =>
+      [...tr.children].map(td => `"${(td.innerText||'').replaceAll('"','""')}"`).join(',')
+    );
+    const blob = new Blob([rows.join('\n')], {type: 'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = Object.assign(document.createElement('a'), {href:url, download:filename});
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  }
+</script>
+{% endblock %}

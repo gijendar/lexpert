@@ -25,6 +25,16 @@ c.execute('''CREATE TABLE IF NOT EXISTS login_history (
     FOREIGN KEY(user_id) REFERENCES users(id)
 )''')
 
+# ---------------- FEEDBACK TABLE ----------------
+c.execute('''CREATE TABLE IF NOT EXISTS feedback (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    rating INTEGER,
+    review TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY(user_id) REFERENCES users(id)
+)''')
+
 # ---------------- CREATE DEFAULT ADMIN ----------------
 admin_username = "admin"
 admin_password = "admin123"
@@ -46,4 +56,4 @@ else:
 conn.commit()
 conn.close()
 
-print("✅ Database initialized successfully with secure password storage!")
+print("✅ Database initialized successfully with secure password storage and feedback table!")

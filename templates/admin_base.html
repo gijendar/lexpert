@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Admin · Lexpert{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <style>
+    :root {
+      --primary:#0a84ff;   /* iOS blue */
+      --accent:#34c759;    /* iOS green */
+      --warn:#ff3b30;      /* iOS red */
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center fixed;
+      background-size: cover;
+      font: 15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Layout */
+    .shell{
+      display:grid;
+      grid-template-columns: 260px 1fr;
+      min-height:100vh;
+    }
+    @media (max-width: 980px){
+      .shell{grid-template-columns: 1fr;}
+      .sidebar{position:sticky; top:0; z-index:20}
+    }
+
+    /* Sidebar */
+    .sidebar{
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(14px);
+      padding: 20px 18px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      padding: 6px 8px; border-radius: 12px;
+    }
+    .brand-logo{
+      width:34px;height:34px;border-radius:12px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      display:grid;place-items:center;
+      border:1px solid rgba(255,255,255,0.25);
+      color: var(--primary); font-weight:700;
+    }
+    .brand h1{
+      margin:0;font-size:18px; letter-spacing:.2px; color:#fff;
+    }
+    .nav{
+      margin-top:18px; padding-top:10px; border-top:1px solid rgba(255,255,255,0.2);
+      display:flex; flex-direction:column; gap:6px;
+    }
+    .nav a{
+      display:flex; align-items:center; gap:10px;
+      padding: 10px 12px; text-decoration:none; color: #fff;
+      border-radius: 12px; transition: .2s ease;
+    }
+    .nav a .dot{width:8px;height:8px;border-radius:50%;background:#ccc}
+    .nav a.active, .nav a:hover{
+      background: rgba(255,255,255,0.15);
+      color: var(--primary);
+    }
+    .nav a.active .dot{ background: var(--primary); }
+
+    .sidebar-footer{
+      margin-top:auto; padding-top:14px; border-top:1px solid rgba(255,255,255,0.2);
+      display:flex; gap:8px; align-items:center; justify-content:space-between;
+    }
+    .btn{
+      appearance:none; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.1); color:#fff;
+      padding:8px 12px; border-radius:12px; cursor:pointer; transition:.2s;
+      backdrop-filter: blur(8px);
+    }
+    .btn:hover{ transform: translateY(-1px); background:rgba(255,255,255,0.2); }
+    .btn-danger{
+      background: var(--warn); border-color:var(--warn); color:#fff;
+    }
+
+    /* Topbar */
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding: 12px 22px;
+      display:flex; align-items:center; justify-content:space-between;
+      color:#fff;
+    }
+    .crumb{font-weight:600; letter-spacing:.2px;}
+    .search{
+      display:flex; align-items:center; gap:8px;
+      background:rgba(255,255,255,0.15);
+      border:1px solid rgba(255,255,255,0.25);
+      border-radius:999px;
+      padding: 8px 12px; min-width: 260px;
+    }
+    .search input{
+      border:none; outline:none; width:100%; background:transparent;
+      font-size:14px; color:#fff;
+    }
+    .search input::placeholder{ color:rgba(255,255,255,0.6); }
+
+    /* Content */
+    .content{ padding: 24px; }
+    .grid{ display:grid; gap:16px; }
+    .grid.cols-3{ grid-template-columns: repeat(3, 1fr); }
+    .grid.cols-2{ grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 1200px){ .grid.cols-3{grid-template-columns: 1fr 1fr;} }
+    @media (max-width: 820px){ .grid.cols-2, .grid.cols-3{grid-template-columns: 1fr;} }
+
+    .card{
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius);
+      color:#fff;
+    }
+    .card-header{
+      padding: 16px 18px; border-bottom:1px solid rgba(255,255,255,0.15);
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .card-body{ padding: 18px; }
+
+    /* Stat card */
+    .stat{
+      display:flex; align-items:center; gap:14px;
+      padding: 16px; border-radius: 14px;
+      border:1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+    .stat .icon{
+      width:42px; height:42px; border-radius:12px; display:grid; place-items:center;
+      background: rgba(255,255,255,0.2); color: var(--primary);
+    }
+    .stat .value{ font-size:26px; font-weight:700; }
+
+    /* Table */
+    .table{
+      width:100%; border-collapse: separate; border-spacing:0;
+      border:1px solid rgba(255,255,255,0.2); border-radius: 14px;
+      overflow:hidden;
+    }
+    .table th, .table td{ padding: 12px 14px; text-align:left; }
+    .table thead th{
+      background: rgba(255,255,255,0.15);
+      font-weight:600; font-size:13px; color:#fff;
+    }
+    .table tbody tr{ background: rgba(255,255,255,0.08); }
+    .table tbody tr:not(:last-child) td{ border-bottom:1px solid rgba(255,255,255,0.15); }
+    .table tbody tr:hover{ background: rgba(255,255,255,0.15); }
+
+    .chip{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:4px 10px; border-radius:999px;
+      font-size:12px;
+    }
+    .chip.success{ color:#00ff90; background:rgba(0,255,144,0.15); }
+    .chip.warn{ color:#ff7b7b; background:rgba(255,0,0,0.15); }
+
+    /* Stars */
+    .stars{ display:inline-flex; gap:2px; }
+    .star{ width:16px; height:16px; background:#888; }
+    .star.fill{ background: #ffd700; }
+
+    /* Animations */
+    .fade-in{ animation: fade .35s ease-out; }
+    @keyframes fade{ from{opacity:0; transform: translateY(6px)} to{opacity:1; transform:none} }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">Lx</div>
+        <h1>Lexpert Admin</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="{{ url_for('admin_dashboard') }}" class="{% if request.endpoint=='admin_dashboard' %}active{% endif %}">
+          <span class="dot"></span> Dashboard
+        </a>
+        <a href="{{ url_for('admin_feedbacks') }}" class="{% if request.endpoint=='admin_feedbacks' %}active{% endif %}">
+          <span class="dot"></span> Feedbacks
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="btn" href="{{ url_for('index') }}">User App</a>
+        <a class="btn btn-danger" href="{{ url_for('logout') }}">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main>
+      <div class="topbar">
+        <div class="crumb">{% block crumb %}{% endblock %}</div>
+        <div class="row">
+          {% block topbar_tools %}{% endblock %}
+        </div>
+      </div>
+
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

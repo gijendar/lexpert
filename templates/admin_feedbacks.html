@@ -1,0 +1,102 @@
+{% extends "admin_base.html" %}
+{% block title %}Feedbacks · Lexpert{% endblock %}
+{% block crumb %}Admin / Feedbacks{% endblock %}
+{% block topbar_tools %}
+  <div class="search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round"/></svg>
+    <input id="fbSearch" type="search" placeholder="Search feedback by user, email or message…" oninput="filterFeedbacks()" />
+  </div>
+{% endblock %}
+{% block content %}
+<section class="card fade-in">
+  <div class="card-header">
+    <div class="row">
+      <strong>User Feedbacks</strong>
+      <span class="chip">{{ feedbacks|length }} records</span>
+    </div>
+    <div class="row">
+      <button class="btn" onclick="exportTable('fbTable','feedbacks.csv')">Export CSV</button>
+    </div>
+  </div>
+  <div class="card-body">
+    {% if feedbacks %}
+    <div style="overflow:auto;">
+      <table class="table" id="fbTable">
+        <thead>
+          <tr>
+            
+            <th>User</th>
+            <th>Email</th>
+            <th style="width:140px;">Rating</th>
+            <th>Message</th>
+            <th style="width:190px;">Date</th>
+            <th style="width:90px;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="fbBody">
+          {% for fb in feedbacks %}
+          <tr data-row id="feedback-row-{{ fb[0] }}">
+           
+            <td data-key="user">{{ fb[1] }}</td>
+            <td data-key="email">{{ fb[2] }}</td>
+            <td>
+              <div class="stars" aria-label="{{ fb[3] }} out of 5">
+                {% for i in range(1,6) %}
+                  <span class="star {% if i <= fb[3] %}fill{% endif %}"></span>
+                {% endfor %}
+              </div>
+            </td>
+            <td data-key="msg">{{ fb[4] }}</td>
+            <td>{{ fb[5] }}</td>
+            <td>
+              <button class="btn btn-danger" onclick="confirmDeleteFeedback({{ fb[0] }})">Remove</button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+      <p class="muted">No feedbacks available yet.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+  function filterFeedbacks(){
+    const q = (document.getElementById('fbSearch').value || '').toLowerCase();
+    document.querySelectorAll('#fbBody [data-row]').forEach(tr=>{
+      const u = (tr.querySelector('[data-key="user"]').textContent||'').toLowerCase();
+      const e = (tr.querySelector('[data-key="email"]').textContent||'').toLowerCase();
+      const m = (tr.querySelector('[data-key="msg"]').textContent||'').toLowerCase();
+      tr.style.display = (u.includes(q) || e.includes(q) || m.includes(q)) ? '' : 'none';
+    });
+  }
+  async function confirmDeleteFeedback(id){
+    if(!confirm("Remove this feedback entry?")) return;
+    try{
+      const res = await fetch(`/delete_feedback/${id}`, {method: 'POST'});
+      const data = await res.json();
+      if(data.success){
+        const row = document.getElementById(`feedback-row-${id}`);
+        if(row) row.remove();
+      } else {
+        alert(data.error || 'Failed to delete feedback.');
+      }
+    }catch(e){
+      alert('Network error.');
+    }
+  }
+  function exportTable(tableId, filename){
+    const table = document.getElementById(tableId);
+    const rows = [...table.querySelectorAll('tr')].map(tr =>
+      [...tr.children].map(td => `"${(td.innerText||'').replaceAll('"','""')}"`).join(',')
+    );
+    const blob = new Blob([rows.join('\n')], {type: 'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = Object.assign(document.createElement('a'), {href:url, download:filename});
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  }
+</script>
+{% endblock %}

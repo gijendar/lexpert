@@ -1,60 +1,75 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<section class="about-section" data-aos="fade-up">
-
-  <div class="about-heading" data-aos="zoom-in">
-    <div class="about-logo-group" data-aos="fade-down" data-aos-delay="200">
-        <span class="about-icon">⚖️</span>
-        <span class="about-title">Lexpert</span>
+<section class="about-section" data-aos="fade-up" style="max-width:900px; margin:auto; padding:40px; background:rgba(255,255,255,0.05); border-radius:16px; box-shadow: 0 0 30px rgba(0,0,0,0.3);">
+  <div class="about-heading" data-aos="zoom-in" style="text-align:center; margin-bottom:30px;">
+    <div class="about-logo-group" data-aos="fade-down" data-aos-delay="200" style="display:inline-flex; align-items:center; gap:10px; font-size:36px; color:#00ffff; font-weight:bold;">
+      <span class="about-icon">⚖️</span>
+      <span class="about-title">Lexpert</span>
     </div>
-    <div class="about-logo-underline" data-aos="fade-in" data-aos-delay="400"></div>
-    <p class="about-slogan" data-aos="fade-up" data-aos-delay="600">Your Digital Legal Companion</p>
-</div>
+    <div class="about-logo-underline" data-aos="fade-in" data-aos-delay="400" style="margin:10px auto; width:160px; height:3px; background:#00ffff; border-radius:2px;"></div>
+    <p class="about-slogan" data-aos="fade-up" data-aos-delay="600" style="font-size:20px; font-style:italic; color:#ccc;">Your Digital Legal Companion</p>
+  </div>
 
-    <p class="about-intro" data-aos="fade-left" data-aos-delay="800">
+  <p class="about-intro" data-aos="fade-left" data-aos-delay="800" style="font-size:18px; color:#ddd; text-align:center; line-height:1.6;">
+    Lexpert is your intelligent legal companion — built to help citizens instantly understand the IPC section, punishment, and fine behind each offense in India. It simplifies complex legal information into a user-friendly, accessible platform.
+  </p>
 
-        Lexpert is your intelligent legal companion — built to help citizens instantly understand the IPC section, punishment, and fine behind any offense in India. It simplifies complex legal information into a user-friendly platform.
-    </p>
-
-    <div class="about-features">
-        <div class="feature-box" data-aos="flip-left" data-aos-delay="1000">
-
-            <h3>🔍 Smart Search</h3>
-            <p>Type or select any offense to instantly get IPC details, fine, and punishment info.</p>
-        </div>
-        <div class="feature-box" data-aos="flip-left" data-aos-delay="1000">
-
-            <h3>📞 Victim Helpdesk</h3>
-            <p>Provides official helpline numbers and legal assistance links based on selected offense.</p>
-        </div>
-        <div class="feature-box" data-aos="flip-left" data-aos-delay="1000">
-
-            <h3>📂 Full IPC Directory</h3>
-            <p>Explore over 200 categorized legal offenses with clear and concise explanations.</p>
-        </div>
-        <div class="feature-box" data-aos="flip-left" data-aos-delay="1000">
-
-            <h3>🌗 Light/Dark Mode</h3>
-            <p>Switch easily between dark and light themes for better reading and visibility.</p>
-        </div>
-    </div>
-<div class="about-tech" data-aos="fade-right" data-aos-delay="1600">
-
-        <h3>🛠️ Technologies Used</h3>
-        <ul>
-            <li><strong>Backend:</strong> Python (Flask)</li>
-            <li><strong>Frontend:</strong> HTML5 + CSS3</li>
-            <li><strong>Database:</strong> JSON (200+ entries)</li>
-            <li><strong>UX:</strong> Desktop-friendly with Light/Dark theme</li>
-        </ul>
+  <div class="about-features" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:30px; margin:40px 0;">
+    <div class="feature-box" data-aos="flip-left" data-aos-delay="1000" style="background:rgba(0,217,255,0.07); padding:20px; border-left:5px solid #00ffff; border-radius:12px; transition:transform 0.3s ease;">
+      <h3 style="color:#00ffff; margin-bottom:10px;">🔍 Smart Search</h3>
+      <p>Type or select any offense to get instant info on IPC sections, punishments, and fines.</p>
     </div>
 
-    <div class="about-credit" data-aos="fade-up" data-aos-delay="1000">
-
-        <p><strong>Project by:</strong> Gijendar Nadar</p>
-        <p><strong>Institution:</strong> B.N.N. College of Arts, Science & Commerce, Bhiwandi</p>
-        <p><strong>Academic Year:</strong> TYBSc-CS Final Year Project, 2025</p>
+    <div class="feature-box" data-aos="flip-left" data-aos-delay="1200" style="background:rgba(0,217,255,0.07); padding:20px; border-left:5px solid #00ffff; border-radius:12px; transition:transform 0.3s ease;">
+      <h3 style="color:#00ffff; margin-bottom:10px;">📞 Victim Helpdesk</h3>
+      <p>Provides official helpline numbers and legal assistance links for immediate support.</p>
     </div>
+
+    <div class="feature-box" data-aos="flip-left" data-aos-delay="1400" style="background:rgba(0,217,255,0.07); padding:20px; border-left:5px solid #00ffff; border-radius:12px; transition:transform 0.3s ease;">
+      <h3 style="color:#00ffff; margin-bottom:10px;">📂 Extensive Directory</h3>
+      <p>Explore 200+ categorized offenses with clear explanations, legal sections, and penalties.</p>
+    </div>
+
+    <div class="feature-box" data-aos="flip-left" data-aos-delay="1600" style="background:rgba(0,217,255,0.07); padding:20px; border-left:5px solid #00ffff; border-radius:12px; transition:transform 0.3s ease;">
+      <h3 style="color:#00ffff; margin-bottom:10px;">🌗 Seamless Themes</h3>
+      <p>Toggle easily between light and dark modes for comfortable reading anytime.</p>
+    </div>
+  </div>
+
+  <div class="about-tech" data-aos="fade-right" data-aos-delay="1800" style="color:#ccc; font-size:16px; max-width:700px; margin:auto;">
+    <h2 style="color:#00ffff; text-align:center; margin-bottom:20px;">🛠 Technologies Used</h2>
+    <ul style="list-style:none; padding-left:0; display:flex; flex-wrap:wrap; gap:20px; justify-content:center; font-weight:500;">
+      <li>Python (Flask)</li>
+      <li>SQLite</li>
+      <li>Jinja2 Templating</li>
+      <li>HTML5 &amp; CSS3</li>
+      <li>JavaScript (for dynamic UI)</li>
+      <li>Werkzeug Security</li>
+    </ul>
+  </div>
+
+  <div class="about-credit" data-aos="fade-up" data-aos-delay="1000" style="margin-top:50px; font-size:14px; color:#777; text-align:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;">
+    <p><b>© 2023 Gijendar Nadar | B.N.N. College of Arts, Science & Commerce, Bhiwandi</p>
+    <p>Final Year Project - TYBSc Computer Science</b></p>
+  </div>
 </section>
+
+<style>
+  .feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,217,255,0.5);
+    border-left-color: #00ffff;
+  }
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpAnimation 1s forwards;
+  }
+  @keyframes fadeUpAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 {% endblock %}
