@@ -48,7 +48,7 @@
       <table class="table" id="usersTable">
         <thead>
           <tr>
-            <th style="width:70px;">ID</th>
+            
             <th>Username</th>
             <th>Email</th>
             <th style="width:120px;">Role</th>
@@ -59,7 +59,7 @@
         <tbody id="usersBody">
         {% for user in users %}
           <tr data-row>
-            <td>{{ user['id'] }}</td>
+           
             <td data-key="username">{{ user['username'] }}</td>
             <td data-key="email">{{ user['email'] or '-' }}</td>
             <td>
