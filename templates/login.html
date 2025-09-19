@@ -16,7 +16,6 @@
       align-items: center;
       animation: fadeIn 1.5s ease-in-out;
     }
-
     .overlay {
       position: absolute;
       top: 0; left: 0;
@@ -26,7 +25,6 @@
       z-index: 1;
       animation: fadeOverlay 1.5s ease-in-out;
     }
-
     .login-box {
       position: relative;
       z-index: 2;
@@ -39,7 +37,6 @@
       backdrop-filter: blur(12px);
       animation: zoomInUp 1.2s ease-out;
     }
-
     .login-box h1 {
       color: #fff;
       margin-bottom: 25px;
@@ -47,7 +44,6 @@
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       animation: slideDown 1s ease;
     }
-
     /* ---------- Error Box ---------- */
     .error-box {
       background: rgba(255, 77, 77, 0.9);
@@ -59,7 +55,6 @@
       animation: shake 0.4s ease-in-out, fadeIn 0.6s ease-in-out;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
-
     @keyframes shake {
       0% { transform: translateX(0); }
       25% { transform: translateX(-8px); }
@@ -67,7 +62,6 @@
       75% { transform: translateX(-8px); }
       100% { transform: translateX(0); }
     }
-
     /* ---------- Inputs ---------- */
     .login-box input {
       width: 100%;
@@ -79,12 +73,10 @@
       font-size: 1rem;
       transition: all 0.3s ease;
     }
-
     .login-box input:focus {
       box-shadow: 0 0 12px #00c6ff;
       transform: scale(1.03);
     }
-
     /* ---------- Button ---------- */
     .login-box button {
       width: 100%;
@@ -100,63 +92,52 @@
       transition: all 0.3s ease-in-out;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
-
     .login-box button:hover {
       transform: translateY(-3px) scale(1.05);
       box-shadow: 0 6px 18px rgba(0,0,0,0.6);
       background: linear-gradient(135deg, #00c6ff, #007BFF);
     }
-
-    .login-box a {
-      display: block;
+    .login-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
       margin-top: 15px;
+    }
+    .login-box a {
       color: #ffdd57;
       text-decoration: none;
       transition: color 0.3s;
+      display: inline-block;
     }
-
     .login-box a:hover {
       color: #fff;
       text-shadow: 0 0 10px #ffdd57;
     }
-
     /* ---------- Animations ---------- */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeOverlay {
-      from { background: rgba(0,0,0,0); }
-      to { background: rgba(0,0,0,0.6); }
-    }
-
-    @keyframes zoomInUp {
-      from { transform: translateY(60px) scale(0.8); opacity: 0; }
-      to { transform: translateY(0) scale(1); opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeOverlay { from { background: rgba(0,0,0,0); } to { background: rgba(0,0,0,0.6); } }
+    @keyframes zoomInUp { from { transform: translateY(60px) scale(0.8); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
+    @keyframes slideDown { from { transform: translateY(-40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
   <div class="login-box">
     <h1>🔐 Login to Lexpert</h1>
-
     <!-- ✅ Error message (animated) -->
     {% if error %}
       <div class="error-box">{{ error }}</div>
     {% endif %}
-
     <form method="POST">
       <input type="text" name="username" placeholder="Enter Username" required>
       <input type="password" name="password" placeholder="Enter Password" required>
       <button type="submit">Login</button>
-      <a href="{{ url_for('register') }}">Create New Account</a>
+
+      <!-- NEW: Side-by-side links -->
+      <div class="login-links">
+        <a href="{{ url_for('register') }}">Create New Account</a>
+        <a href="{{ url_for('forgot_password') }}">Forgot Password?</a>
+      </div>
     </form>
   </div>
 </body>

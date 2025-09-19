@@ -36,6 +36,43 @@ except Exception as e:
     print("Error loading offense_data.json:", e)
     offense_data = []
 
+# ---------------- HELPERS FOR PW RESET ---------------- #
+def find_user_by_identifier(db, identifier):
+    """
+    Identifier can be numeric id or username string.
+    Returns a row or None.
+    """
+    if not identifier:
+        return None
+    ident = identifier.strip()
+    row = None
+    if ident.isdigit():
+        row = db.execute("SELECT * FROM users WHERE id = ?", (int(ident),)).fetchone()
+        if row:
+            return row
+    row = db.execute("SELECT * FROM users WHERE username = ?", (ident,)).fetchone()
+    return row
+
+def verify_two_of_three(user, identifier, dob, email):
+    """
+    Count matches among: identifier (id or username), dob, email.
+    Requires users table to have column dob TEXT.
+    """
+    matches = 0
+    if identifier:
+        ident = identifier.strip()
+        if (ident.isdigit() and int(ident) == user["id"]) or (ident.lower() == (user["username"] or "").lower()):
+            matches += 1
+    if dob:
+        # Expect YYYY-MM-DD
+        user_dob = (user["dob"] or "").strip() if "dob" in user.keys() else ""
+        if user_dob and dob.strip() == user_dob:
+            matches += 1
+    if email:
+        if (user["email"] or "").lower().strip() == email.lower().strip():
+            matches += 1
+    return matches >= 2
+
 # ---------------- AUTH ROUTES ---------------- #
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -43,16 +80,34 @@ def register():
         username = request.form["username"]
         password = request.form["password"]
         email = request.form["email"]
+        dob = request.form.get("dob", "").strip()  # NEW: capture DOB from form
+        # Basic DOB normalization: accept empty or YYYY-MM-DD
+        if dob:
+            try:
+                # Validate format; store as YYYY-MM-DD
+                _ = datetime.strptime(dob, "%Y-%m-%d")
+            except ValueError:
+                error = "Invalid DOB format. Use YYYY-MM-DD."
+                return render_template("register.html", error=error)
         hashed_pw = generate_password_hash(password)
         db = get_db()
         try:
-            db.execute(
-                "INSERT INTO users (username, password, email, created_at) VALUES (?, ?, ?, ?)",
-                (username, hashed_pw, email, get_ist_time())
-            )
+            # Insert with dob if column exists, else without
+            # Check once: does users table have 'dob'?
+            cols = [r["name"] for r in db.execute("PRAGMA table_info(users)").fetchall()]
+            if "dob" in cols:
+                db.execute(
+                    "INSERT INTO users (username, password, email, created_at, dob) VALUES (?, ?, ?, ?, ?)",
+                    (username, hashed_pw, email, get_ist_time(), dob or None)
+                )
+            else:
+                db.execute(
+                    "INSERT INTO users (username, password, email, created_at) VALUES (?, ?, ?, ?)",
+                    (username, hashed_pw, email, get_ist_time())
+                )
             db.commit()
             return redirect(url_for("login"))
-        except:
+        except Exception:
             error = "Username already exists. Please try another."
             return render_template("register.html", error=error)
     return render_template("register.html")
@@ -95,6 +150,89 @@ def logout():
     session.clear()
     return redirect(url_for("login"))
 
+# ---------------- FORGOT / RESET PASSWORD ---------------- #
+@app.route("/forgot_password", methods=["GET", "POST"])
+def forgot_password():
+    """
+    Show 3 inputs: identifier (id/username), dob, email.
+    Require any 2 to match the same user row; then set session flag and redirect to reset.
+    """
+    if request.method == "POST":
+        identifier = request.form.get("identifier", "").strip()
+        dob = request.form.get("dob", "").strip()
+        email = request.form.get("email", "").strip()
+        if not (identifier or dob or email):
+            return render_template("forgot_password.html", error="Enter at least two fields to proceed.")
+        # Find candidate by identifier or by email as fallback
+        db = get_db()
+        user = None
+        if identifier:
+            user = find_user_by_identifier(db, identifier)
+        if not user and email:
+            user = db.execute("SELECT * FROM users WHERE lower(email)=lower(?)", (email,)).fetchone()
+        if not user:
+            return render_template("forgot_password.html", error="No matching account found. Please check details.")
+        # Verify two of three
+        if not verify_two_of_three(user, identifier, dob, email):
+            # Optional: add simple rate-limit via session counter
+            session["fp_fail"] = session.get("fp_fail", 0) + 1
+            return render_template("forgot_password.html", error="Verification failed. Provide any two correct details.")
+        # Success: allow reset
+        session["pw_reset_user"] = user["id"]
+        session.pop("fp_fail", None)
+        return redirect(url_for("reset_password"))
+    return render_template("forgot_password.html")
+
+@app.route("/reset_password", methods=["GET", "POST"])
+def reset_password():
+    """
+    Guarded by session['pw_reset_user'] set by forgot flow.
+    POST: accept password + confirm, hash and save, log to password_updates.
+    """
+    uid = session.get("pw_reset_user")
+    if not uid:
+        return redirect(url_for("forgot_password"))
+    error = None
+    message = None
+    if request.method == "POST":
+        password = request.form.get("password", "")
+        confirm = request.form.get("confirm", "")
+        # Basic server-side policy (mirror client rules)
+        valid = (
+            len(password) >= 8 and
+            any(c.isupper() for c in password) and
+            any(c.islower() for c in password) and
+            any(c.isdigit() for c in password) and
+            any(not c.isalnum() for c in password)
+        )
+        if not valid:
+            error = "Password does not meet security rules."
+            return render_template("reset_password.html", error=error)
+        if password != confirm:
+            error = "Passwords do not match."
+            return render_template("reset_password.html", error=error)
+        # Update DB
+        db = get_db()
+        db.execute("UPDATE users SET password = ? WHERE id = ?", (generate_password_hash(password), uid))
+        # Ensure password_updates table exists, then log
+        db.execute("""
+            CREATE TABLE IF NOT EXISTS password_updates (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                method TEXT DEFAULT 'forgot_flow',
+                FOREIGN KEY(user_id) REFERENCES users(id)
+            )
+        """)
+        db.execute("INSERT INTO password_updates (user_id, updated_at, method) VALUES (?, ?, ?)",
+                   (uid, get_ist_time(), "forgot_flow"))
+        db.commit()
+        # Clear reset gate and force login
+        session.pop("pw_reset_user", None)
+        flash("Password updated successfully. Please login with your new password.")
+        return redirect(url_for("login"))
+    return render_template("reset_password.html")
+
 # ---------------- ADMIN DASHBOARD ---------------- #
 @app.route("/admin")
 def admin_dashboard():
@@ -109,7 +247,46 @@ def admin_dashboard():
         ORDER BY lh.login_time DESC
     """).fetchall()
     active_users = sum(1 for h in history if h["logout_time"] is None)
-    return render_template("admin.html", users=users, history=history, active_users=active_users)
+    # Pull password updates for admin.html extra section (if template uses it)
+    db.execute("""
+        CREATE TABLE IF NOT EXISTS password_updates (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            method TEXT DEFAULT 'forgot_flow',
+            FOREIGN KEY(user_id) REFERENCES users(id)
+        )
+    """)
+    pw_updates = db.execute("""
+        SELECT pu.updated_at, pu.method, u.username, u.email
+        FROM password_updates pu
+        JOIN users u ON u.id = pu.user_id
+        ORDER BY pu.updated_at DESC
+    """).fetchall()
+    return render_template("admin.html", users=users, history=history, active_users=active_users, pw_updates=pw_updates)
+
+# Optional dedicated page if you created admin_password_updates.html
+@app.route("/admin/password_updates")
+def admin_password_updates():
+    if "user_id" not in session or session.get("role") != "admin":
+        return "❌ Access Denied!"
+    db = get_db()
+    db.execute("""
+        CREATE TABLE IF NOT EXISTS password_updates (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            method TEXT DEFAULT 'forgot_flow',
+            FOREIGN KEY(user_id) REFERENCES users(id)
+        )
+    """)
+    pw_updates = db.execute("""
+        SELECT pu.updated_at, pu.method, u.username, u.email
+        FROM password_updates pu
+        JOIN users u ON u.id = pu.user_id
+        ORDER BY pu.updated_at DESC
+    """).fetchall()
+    return render_template("admin_password_updates.html", pw_updates=pw_updates, username=session.get("username"))
 
 # ✅ Delete User Route (POST only, JSON response)
 @app.route("/delete_user/<int:user_id>", methods=["POST"])
@@ -183,7 +360,6 @@ def admin_feedbacks():
     if "user_id" not in session or session.get("role") != "admin":
         return "❌ Access Denied!"
     db = get_db()
-    # Sorted offenses alphabetically in admin views not needed here, just return feedbacks as is
     feedbacks = db.execute("""
         SELECT f.id, u.username, u.email, f.rating, f.review, f.created_at
         FROM feedback f

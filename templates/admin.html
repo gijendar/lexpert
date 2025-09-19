@@ -32,6 +32,7 @@
     </div>
   </div>
 </div>
+
 <!-- Users -->
 <section class="card fade-in">
   <div class="card-header">
@@ -48,7 +49,6 @@
       <table class="table" id="usersTable">
         <thead>
           <tr>
-            
             <th>Username</th>
             <th>Email</th>
             <th style="width:120px;">Role</th>
@@ -59,7 +59,6 @@
         <tbody id="usersBody">
         {% for user in users %}
           <tr data-row>
-           
             <td data-key="username">{{ user['username'] }}</td>
             <td data-key="email">{{ user['email'] or '-' }}</td>
             <td>
@@ -84,6 +83,7 @@
     </div>
   </div>
 </section>
+
 <!-- Login History -->
 <section class="card fade-in" style="margin-top:16px;">
   <div class="card-header">
@@ -128,7 +128,47 @@
     </div>
   </div>
 </section>
+
+<!-- Password Update Logs -->
+<section class="card fade-in" style="margin-top:16px;">
+  <div class="card-header">
+    <div class="row">
+      <strong>Password Update Logs</strong>
+      <span class="chip">{{ pw_updates|length if pw_updates is defined else 0 }} entries</span>
+    </div>
+    <div class="row">
+      <button class="btn" onclick="exportTable('pwUpdatesTable','password_updates.csv')">Export CSV</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div style="overflow:auto;">
+      <table class="table" id="pwUpdatesTable">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Email</th>
+            <th>Updated At</th>
+            <th>Method</th>
+          </tr>
+        </thead>
+        <tbody id="pwUpdatesBody">
+        {% if pw_updates is defined %}
+          {% for p in pw_updates %}
+            <tr data-row>
+              <td data-key="username">{{ p['username'] }}</td>
+              <td data-key="email">{{ p['email'] or '-' }}</td>
+              <td>{{ p['updated_at'] }}</td>
+              <td><span class="chip">{{ p['method'] or 'forgot_flow' }}</span></td>
+            </tr>
+          {% endfor %}
+        {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 {% endblock %}
+
 {% block scripts %}
 <script>
   // Client-side filter for Users table
@@ -140,6 +180,7 @@
       tr.style.display = (name.includes(q) || email.includes(q)) ? '' : 'none';
     });
   }
+
   // Confirm + Delete user via POST
   async function confirmDelete(id, username){
     if(!confirm(`Remove user "${username}"?`)) return;
@@ -160,6 +201,7 @@
       alert('Network error.');
     }
   }
+
   // Confirm + Delete login history entry via POST
   async function confirmDeleteHistory(id){
     if(!confirm(`Remove this login history entry?`)) return;
@@ -177,6 +219,7 @@
       alert('Network error.');
     }
   }
+
   // Export table to CSV
   function exportTable(tableId, filename){
     const table = document.getElementById(tableId);
