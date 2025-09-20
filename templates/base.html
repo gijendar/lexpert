@@ -89,5 +89,10 @@ themeSwitch.addEventListener("change", () => {
   });
 </script>
 
+<script>
+  // Server ko har 5 min me halka ping, taaki service active rahe
+  setInterval(() => { fetch("/ping", { cache: "no-store" }); }, 300000);
+</script>
+
 </body>
 </html>

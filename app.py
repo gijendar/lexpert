@@ -436,6 +436,12 @@ def notes():
         return redirect(url_for("login"))
     return render_template('notes.html', offense_data=offense_data, username=session.get("username"))
 
+# ---- Keep-alive ping (add here) ----
+@app.route("/ping")
+def ping():
+    return "ok", 200
+# ------------------------------------
+
 # ---------------- RUN APP ---------------- #
 if __name__ == '__main__':
     app.run(debug=True)
