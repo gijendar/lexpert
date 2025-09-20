@@ -4,7 +4,6 @@ import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 import pytz
-
 app = Flask(__name__)
 app.secret_key = "supersecretkey"  # apna secret change kar lena
 DATABASE = "users.db"
@@ -258,7 +257,7 @@ def admin_dashboard():
         )
     """)
     pw_updates = db.execute("""
-        SELECT pu.updated_at, pu.method, u.username, u.email
+        SELECT pu.id, pu.updated_at, pu.method, u.username, u.email
         FROM password_updates pu
         JOIN users u ON u.id = pu.user_id
         ORDER BY pu.updated_at DESC
@@ -281,7 +280,7 @@ def admin_password_updates():
         )
     """)
     pw_updates = db.execute("""
-        SELECT pu.updated_at, pu.method, u.username, u.email
+        SELECT pu.id, pu.updated_at, pu.method, u.username, u.email
         FROM password_updates pu
         JOIN users u ON u.id = pu.user_id
         ORDER BY pu.updated_at DESC
@@ -330,6 +329,19 @@ def delete_feedback(feedback_id):
     if not fb:
         return jsonify({"success": False, "error": "Feedback not found"}), 404
     db.execute("DELETE FROM feedback WHERE id = ?", (feedback_id,))
+    db.commit()
+    return jsonify({"success": True})
+
+# --------- New Route: Delete Password Update Entry ----------
+@app.route("/delete_pw_update/<int:update_id>", methods=["POST"])
+def delete_pw_update(update_id):
+    if "user_id" not in session or session.get("role") != "admin":
+        return jsonify({"success": False, "error": "Access Denied"}), 403
+    db = get_db()
+    row = db.execute("SELECT id FROM password_updates WHERE id = ?", (update_id,)).fetchone()
+    if not row:
+        return jsonify({"success": False, "error": "Entry not found"}), 404
+    db.execute("DELETE FROM password_updates WHERE id = ?", (update_id,))
     db.commit()
     return jsonify({"success": True})
 

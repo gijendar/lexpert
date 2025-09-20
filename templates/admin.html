@@ -32,7 +32,6 @@
     </div>
   </div>
 </div>
-
 <!-- Users -->
 <section class="card fade-in">
   <div class="card-header">
@@ -83,7 +82,6 @@
     </div>
   </div>
 </section>
-
 <!-- Login History -->
 <section class="card fade-in" style="margin-top:16px;">
   <div class="card-header">
@@ -128,7 +126,6 @@
     </div>
   </div>
 </section>
-
 <!-- Password Update Logs -->
 <section class="card fade-in" style="margin-top:16px;">
   <div class="card-header">
@@ -149,16 +146,20 @@
             <th>Email</th>
             <th>Updated At</th>
             <th>Method</th>
+            <th style="width:90px;">Action</th> <!-- added -->
           </tr>
         </thead>
         <tbody id="pwUpdatesBody">
         {% if pw_updates is defined %}
           {% for p in pw_updates %}
-            <tr data-row>
+            <tr data-row id="pwup-{{ p['id'] }}"> <!-- id added -->
               <td data-key="username">{{ p['username'] }}</td>
               <td data-key="email">{{ p['email'] or '-' }}</td>
               <td>{{ p['updated_at'] }}</td>
               <td><span class="chip">{{ p['method'] or 'forgot_flow' }}</span></td>
+              <td>
+                <button class="btn btn-danger" onclick="removePwUpdate({{ p['id'] }})">Remove</button>
+              </td>
             </tr>
           {% endfor %}
         {% endif %}
@@ -168,7 +169,6 @@
   </div>
 </section>
 {% endblock %}
-
 {% block scripts %}
 <script>
   // Client-side filter for Users table
@@ -180,7 +180,6 @@
       tr.style.display = (name.includes(q) || email.includes(q)) ? '' : 'none';
     });
   }
-
   // Confirm + Delete user via POST
   async function confirmDelete(id, username){
     if(!confirm(`Remove user "${username}"?`)) return;
@@ -188,9 +187,9 @@
       const res = await fetch(`/delete_user/${id}`, { method:'POST' });
       const data = await res.json();
       if(data.success){
-        // Remove row from table
+        // Remove row from table (match by username/email cells)
         [...document.querySelectorAll('#usersBody tr')].forEach(tr=>{
-          if(tr.firstElementChild && tr.firstElementChild.textContent == String(id)){
+          if(tr.querySelector('[data-key="username"]')?.textContent === username){
             tr.remove();
           }
         });
@@ -201,7 +200,6 @@
       alert('Network error.');
     }
   }
-
   // Confirm + Delete login history entry via POST
   async function confirmDeleteHistory(id){
     if(!confirm(`Remove this login history entry?`)) return;
@@ -209,7 +207,6 @@
       const res = await fetch(`/delete_history/${id}`, { method:'POST' });
       const data = await res.json();
       if(data.success){
-        // Remove row from table
         const row = document.getElementById(`history-row-${id}`);
         if(row) row.remove();
       }else{
@@ -219,7 +216,22 @@
       alert('Network error.');
     }
   }
-
+  // ---- NEW: Delete password update row ----
+  async function removePwUpdate(id){
+    if(!confirm('Remove this password update log?')) return;
+    try{
+      const res = await fetch(`/delete_pw_update/${id}`, { method:'POST' });
+      const data = await res.json();
+      if(data.success){
+        const row = document.getElementById(`pwup-${id}`);
+        if(row) row.remove();
+      }else{
+        alert(data.error || 'Failed to delete entry.');
+      }
+    }catch(e){
+      alert('Network error.');
+    }
+  }
   // Export table to CSV
   function exportTable(tableId, filename){
     const table = document.getElementById(tableId);

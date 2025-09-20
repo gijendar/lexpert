@@ -118,6 +118,20 @@
     @keyframes fadeOverlay { from { background: rgba(0,0,0,0); } to { background: rgba(0,0,0,0.6); } }
     @keyframes zoomInUp { from { transform: translateY(60px) scale(0.8); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
     @keyframes slideDown { from { transform: translateY(-40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* ---------- Eye toggle (added) ---------- */
+    .field { position: relative; }
+    .icon-toggle{
+      position:absolute; right:10px; top:50%; transform:translateY(-50%);
+      width:28px; height:28px; display:flex; align-items:center; justify-content:center;
+      border-radius:8px; background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+      color:#a8b3c7; cursor:pointer;
+    }
+    .icon-toggle:hover{ background: rgba(255,255,255,0.16); color:#00d9ff; }
+    .icon-toggle svg{ display:block; }
+    .icon-toggle .eye-off{ display:none; }
+    .icon-toggle.active .eye-on{ display:none; }
+    .icon-toggle.active .eye-off{ display:block; }
   </style>
 </head>
 <body>
@@ -130,9 +144,27 @@
     {% endif %}
     <form method="POST">
       <input type="text" name="username" placeholder="Enter Username" required>
-      <input type="password" name="password" placeholder="Enter Password" required>
-      <button type="submit">Login</button>
 
+      <!-- password with eye toggle (added) -->
+      <div class="field">
+        <input id="login_password" type="password" name="password" placeholder="Enter Password" required>
+        <span class="icon-toggle" onclick="toggle('login_password', this)" aria-label="Show/Hide password" title="Show/Hide">
+          <!-- eye (visible) -->
+          <svg class="eye-on" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="3" stroke-width="2" />
+          </svg>
+          <!-- eye-off (hidden) -->
+          <svg class="eye-off" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a20.29 20.29 0 0 1 5.06-5.94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 1l22 22" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9.88 9.88A3 3 0 0 0 12 15a3 3 0 0 0 2.12-.88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.12 14.12 9.88 9.88" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </div>
+
+      <button type="submit">Login</button>
       <!-- NEW: Side-by-side links -->
       <div class="login-links">
         <a href="{{ url_for('register') }}">Create New Account</a>
@@ -140,5 +172,15 @@
       </div>
     </form>
   </div>
+
+  <!-- tiny script for toggle (added) -->
+  <script>
+    function toggle(id, el){
+      const input = document.getElementById(id);
+      const toText = input.type === 'password';
+      input.type = toText ? 'text' : 'password';
+      el.classList.toggle('active', toText);
+    }
+  </script>
 </body>
 </html>
